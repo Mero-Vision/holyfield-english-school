@@ -1,7 +1,7 @@
    <head>
         <meta charset="utf-8">
         <meta http-equiv="x-ua-compatible" content="ie=edge">
-        <title>Edura - Online Courses & Education HTML Template - Home One</title>
+        <title>Holy Field English School</title>
         <meta name="author" content="themeholy">
         <meta name="description" content="Edura - Online Courses & Education HTML Template">
         <meta name="keywords" content="Edura - Online Courses & Education HTML Template">
