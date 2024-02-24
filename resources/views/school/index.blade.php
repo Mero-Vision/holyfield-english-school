@@ -152,7 +152,9 @@
                 </div>
             </div>
         </div>
-        <div class="space-top">
+
+
+        {{-- <div class="space-top">
             <div class="container">
                 <div class="category-sec-wrap">
                     <div class="shape-mockup category-shape-arrow d-xl-block d-none">
@@ -306,27 +308,31 @@
                     </div>
                 </div>
             </div>
-        </div>
+        </div> --}}
+
+
+
+
         <div class="space overflow-hidden" id="about-sec">
             <div class="container">
                 <div class="row align-items-center">
                     <div class="col-xl-6">
                         <div class="img-box1 mb-40 mb-xl-0">
                             <div class="img1">
-                                <img class="tilt-active" src="assets/img/normal/about_1_1.png" alt="About">
+                                <img class="tilt-active" src="{{url('assets/school/img/img1.jpeg')}}" alt="About">
                             </div>
-                            <div class="about-grid" data-bg-src="assets/img/normal/about_1_3.png">
+                            <div class="about-grid" data-bg-src="{{url('assets/school/img/img2.jpeg')}}">
                                 <h3 class="about-grid_year">
                                     <span class="counter-number">10</span>
                                     k<span class="text-theme">+</span>
                                 </h3>
-                                <p class="about-grid_text">Students Active Our Courses</p>
+                                <p class="about-grid_text">Active Students</p>
                             </div>
                             <div class="img2">
-                                <img class="tilt-active" src="assets/img/normal/about_1_2.png" alt="About">
+                                <img class="tilt-active" src="{{url('assets/school/img/img2.jpeg')}}" alt="About" style="max-width: 300px">
                             </div>
                             <div class="shape-mockup about-shape1 jump" data-left="-67px" data-bottom="0">
-                                <img src="assets/img/normal/about_1_shape1.png" alt="img">
+                                <img src="{{url('assets/school/img/about_1_shape1.png')}}" alt="img">
                             </div>
                         </div>
                     </div>
@@ -334,16 +340,16 @@
                         <div class="title-area mb-30">
                             <span class="sub-title">
                                 <i class="fal fa-book me-2"></i>
-                                About Our University
+                                About Our School
                             </span>
-                            <h2 class="sec-title">Welcome to Edura University.</h2>
+                            <h2 class="sec-title">Welcome to Holy Fild English School.</h2>
                         </div>
                         <p class="mt-n2 mb-25">Collaboratively simplify user friendly networks after principle centered coordinate effective methods of empowerment distributed niche markets pursue market positioning web-readiness after resource sucking applications.</p>
                         <p class="mb-30">Online education, also known as e-learning, is a method of learning that takes place over the internet. It offers individuals the opportunity to acquire knowledge, skills.</p>
                         <div class="row align-items-center">
                             <div class="col-md-auto">
                                 <div class="about-grid_img mb-30 mb-md-0">
-                                    <img src="assets/img/normal/about_1_4.png" alt="img">
+                                    <img src="{{url('assets/school/img/about_1_4.png')}}" alt="img">
                                 </div>
                             </div>
                             <div class="col-md-7">
