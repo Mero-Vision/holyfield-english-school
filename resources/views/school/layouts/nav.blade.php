@@ -5,14 +5,14 @@
             <i class="fal fa-times"></i>
         </button>
         <div class="mobile-logo">
-            <a href="index.html">
+            <a href="{{url('/')}}">
                 <img src="assets/img/logo.svg" alt="Edura">
             </a>
         </div>
         <div class="th-mobile-menu">
             <ul>
-                <li class="menu-item-has-children">
-                    <a href="index.html">Home</a>
+                <li>
+                    <a href="{{url('/')}}">Home</a>
 
                 </li>
                 <li class="menu-item-has-children">
@@ -164,7 +164,7 @@
                 <div class="row align-items-center justify-content-between">
                     <div class="col-auto">
                         <div class="header-logo">
-                            <a href="index.html" style="display: inline-block; text-decoration: none;">
+                            <a href="{{url('/')}}" style="display: inline-block; text-decoration: none;">
                                 <img src="{{ url('assets/school/img/logo.jpeg') }}" alt="Holy Field English School Logo"
                                     style="max-width: 50px;">
                                 <h5 style="display: inline-block; vertical-align: middle; margin-left: 5px;"
@@ -180,7 +180,7 @@
                                 <nav class="main-menu d-none d-lg-inline-block">
                                     <ul>
                                         <li>
-                                            <a href="index.html">Home</a>
+                                            <a href="{{url('/')}}">Home</a>
 
                                         </li>
                                         <li class="menu-item-has-children">
