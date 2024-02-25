@@ -152,7 +152,7 @@
                  <div class="row justify-content-between align-items-center">
                      <div class="col-md-7">
                          <p class="copyright-text">
-                             Copyright © <?php echo Date('Y'); ?>. Designed By Hancie Phago. <a>Powered By Tech Revo Pvt.Ltd. </a>
+                             Copyright © <?php echo Date('Y'); ?>. Designed By Hancie Phago.
                              All Rights Reserved.
                          </p>
                      </div>

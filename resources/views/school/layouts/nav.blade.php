@@ -98,6 +98,10 @@
                 <li>
                     <a href="contact.html">Contact</a>
                 </li>
+                 <li>
+                    <a href="{{url('/')}}">Login</a>
+
+                </li>
             </ul>
         </div>
     </div>
@@ -144,14 +148,12 @@
                                     <a href="https://www.youtube.com/">
                                         <i class="fab fa-youtube"></i>
                                     </a>
-                                    <a href="https://www.instagram.com/">
-                                        <i class="fab fa-skype"></i>
-                                    </a>
+                                   
                                 </div>
                             </li>
-                            <li class="d-none d-lg-inline-block">
+                            <li class="d-none d-lg-inline-block mx-3">
                                 <i class="far fa-user"></i>
-                                <a href="contact.html">Login / Register</a>
+                                <a href="{{url('login')}}">Login</a>
                             </li>
                         </ul>
                     </div>
@@ -184,84 +186,27 @@
                                             <a href="{{url('/')}}">Home</a>
 
                                         </li>
-                                        <li class="menu-item-has-children">
-                                            <a href="#">Courses</a>
-                                            <ul class="sub-menu">
-                                                <li>
-                                                    <a href="course.html">Courses With Sidebar</a>
-                                                </li>
-                                                <li>
-                                                    <a href="course-2.html">Courses Without Sidebar</a>
-                                                </li>
-                                                <li>
-                                                    <a href="course-3.html">Courses Videos</a>
-                                                </li>
-                                                <li>
-                                                    <a href="course-details.html">Course Details</a>
-                                                </li>
-                                            </ul>
-                                        </li>
-                                        <li class="menu-item-has-children">
+                                        
+                                        <li>
                                             <a href="#">Teachers</a>
-                                            <ul class="sub-menu">
-                                                <li>
-                                                    <a href="team.html">Instructors</a>
-                                                </li>
-                                                <li>
-                                                    <a href="team-details.html">Instructors Details</a>
-                                                </li>
-                                            </ul>
+                                           
                                         </li>
-                                        <li class="menu-item-has-children">
-                                            <a href="#">Pages</a>
-                                            <ul class="sub-menu">
-                                                <li>
-                                                    <a href="about.html">About Us</a>
-                                                </li>
-                                                <li class="menu-item-has-children">
-                                                    <a href="#">Shop</a>
-                                                    <ul class="sub-menu">
-                                                        <li>
-                                                            <a href="shop.html">Shop</a>
-                                                        </li>
-                                                        <li>
-                                                            <a href="shop-details.html">Shop Details</a>
-                                                        </li>
-                                                        <li>
-                                                            <a href="cart.html">Cart Page</a>
-                                                        </li>
-                                                        <li>
-                                                            <a href="checkout.html">Checkout</a>
-                                                        </li>
-                                                        <li>
-                                                            <a href="wishlist.html">Wishlist</a>
-                                                        </li>
-                                                    </ul>
-                                                </li>
-                                                <li>
-                                                    <a href="event.html">Events</a>
-                                                </li>
-                                                <li>
-                                                    <a href="event-details.html">Event Details</a>
-                                                </li>
-                                                <li>
-                                                    <a href="gallery.html">Gallery</a>
-                                                </li>
-                                                <li>
-                                                    <a href="error.html">Error Page</a>
-                                                </li>
-                                            </ul>
+                                         <li>
+                                            <a href="#">Gallery</a>
+                                           
                                         </li>
-                                        <li class="menu-item-has-children">
+                                         <li>
+                                            <a href="#">Events</a>
+                                           
+                                        </li>
+                                         <li>
+                                            <a href="#">About Us</a>
+                                           
+                                        </li>
+                                       
+                                        <li>
                                             <a href="#">Blog</a>
-                                            <ul class="sub-menu">
-                                                <li>
-                                                    <a href="blog.html">Blog</a>
-                                                </li>
-                                                <li>
-                                                    <a href="blog-details.html">Blog Details</a>
-                                                </li>
-                                            </ul>
+                                            
                                         </li>
                                         <li>
                                             <a href="contact.html">Contact</a>
