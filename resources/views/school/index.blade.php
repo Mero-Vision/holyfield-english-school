@@ -33,12 +33,9 @@
                     <div class="row align-items-center justify-content-center">
                         <div class="col-md-6">
                             <div class="hero-style1">
-                                <span class="hero-subtitle" data-ani="slideinleft" data-ani-delay="0.1s">
-                                    <span>35% OFF</span>
-                                    LEARN FROM TODAY
-                                </span>
+                               
                                 <h1 class="hero-title text-white" data-ani="slideinleft" data-ani-delay="0.4s">
-                                    Education Is Create Better <span class="text-theme">Future.</span>
+                                    Education Create Better <span class="text-theme">Future.</span>
                                 </h1>
                                 <p class="hero-text" data-ani="slideinleft" data-ani-delay="0.6s">Education can be
                                     thought of as the transmission of the values and accumulated knowledge of a society.
@@ -78,12 +75,9 @@
                     <div class="row align-items-center justify-content-center">
                         <div class="col-md-6">
                             <div class="hero-style1">
-                                <span class="hero-subtitle" data-ani="slideinleft" data-ani-delay="0.1s">
-                                    <span>35% OFF</span>
-                                    LEARN FROM TODAY
-                                </span>
+                               
                                 <h1 class="hero-title text-white" data-ani="slideinleft" data-ani-delay="0.4s">
-                                    Edura Leads To A Brighter <span class="text-theme">Future.</span>
+                                    Holy Field Leads To A Brighter <span class="text-theme">Future.</span>
                                 </h1>
                                 <p class="hero-text" data-ani="slideinleft" data-ani-delay="0.6s">Education can be
                                     thought of as the transmission of a societys values and accumulated knowledge. In
@@ -123,12 +117,9 @@
                     <div class="row align-items-center justify-content-center">
                         <div class="col-md-6">
                             <div class="hero-style1">
-                                <span class="hero-subtitle" data-ani="slideinleft" data-ani-delay="0.1s">
-                                    <span>35% OFF</span>
-                                    LEARN FROM TODAY
-                                </span>
+                               
                                 <h1 class="hero-title text-white" data-ani="slideinleft" data-ani-delay="0.4s">
-                                    The Worlds Best Online Education <span class="text-theme">Institute.</span>
+                                    The Best Education <span class="text-theme">Institute.</span>
                                 </h1>
                                 <p class="hero-text" data-ani="slideinleft" data-ani-delay="0.6s">Education can be
                                     thought of as the transmission of the values and accumulated knowledge of a society.

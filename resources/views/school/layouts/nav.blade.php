@@ -6,7 +6,8 @@
         </button>
         <div class="mobile-logo">
             <a href="{{url('/')}}">
-                <img src="assets/img/logo.svg" alt="Edura">
+                <img src="{{ url('assets/school/img/logo.jpeg') }}" alt="Holy Field English School Logo"
+                                    style="max-width: 70px;">
             </a>
         </div>
         <div class="th-mobile-menu">
@@ -116,11 +117,11 @@
                             </li>
                             <li class="d-none d-xl-inline-block">
                                 <i class="far fa-envelope"></i>
-                                <a href="mailto:info@Edura.com">info@edura.com</a>
+                                <a href="mailto:info@holyfield.com">info@holyfield.com</a>
                             </li>
                             <li>
                                 <i class="far fa-clock"></i>
-                                Mon - Sat: 8:00 - 15:00
+                                Sun - Fri: 9:00 AM - 4:00 PM
                             </li>
                         </ul>
                     </div>
@@ -166,7 +167,7 @@
                         <div class="header-logo">
                             <a href="{{url('/')}}" style="display: inline-block; text-decoration: none;">
                                 <img src="{{ url('assets/school/img/logo.jpeg') }}" alt="Holy Field English School Logo"
-                                    style="max-width: 50px;">
+                                    style="max-width: 70px;">
                                 <h5 style="display: inline-block; vertical-align: middle; margin-left: 5px;"
                                     class="mt-3">Holy Field
                                     English School</h5>
