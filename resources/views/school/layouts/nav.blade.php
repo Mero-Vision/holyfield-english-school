@@ -167,7 +167,7 @@
                                         <i class="far fa-search"></i>
                                     </button>
 
-                                    <a href="contact.html" class="th-btn ml-25">
+                                    <a href="{{url('contact')}}" class="th-btn ml-25">
                                         Contact Us <i class="fas fa-arrow-right ms-1"></i>
                                     </a>
                                 </div>

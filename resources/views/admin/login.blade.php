@@ -14,7 +14,7 @@
 
     <link rel="stylesheet" href="{{ url('assets/admin/css/feather.css') }}">
 
-    <link rel="stylesheet" href="{{ url('assets/admin/css/flags/flags.css') }}">
+    <link rel="stylesheet" href="{{ url('assets/admin/css/flags.css') }}">
 
     <link rel="stylesheet" href="{{ url('assets/admin/css/fontawesome.min.css') }}">
     <link rel="stylesheet" href="{{ url('assets/admin/css/all.min.css') }}">

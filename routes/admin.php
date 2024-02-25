@@ -1,7 +1,6 @@
 <?php
 
-
-use App\Http\Controllers\School\ContactController;
+use App\Http\Controllers\Admin\LoginController;
 use Illuminate\Support\Facades\Route;
 
 /*
@@ -15,8 +14,6 @@ use Illuminate\Support\Facades\Route;
 |
 */
 
-Route::get('/', function () {
-    return view('school.index');
 
-    
-});Route::get('contact',[ContactController::class,'index']);
+
+Route::get('login', [LoginController::class, 'index']);
