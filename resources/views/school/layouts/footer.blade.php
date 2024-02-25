@@ -24,7 +24,7 @@
                      </div>
                      <div class="media-body">
                          <p class="footer-contact_text">Email us 24/7 hours:</p>
-                         <a href="mailto:info@edura.com" class="footer-contact_link">info@edura.com</a>
+                         <a href="mailto:info@holyfield.com" class="footer-contact_link">info@holyfield.com</a>
                      </div>
                  </div>
                  <div class="divider"></div>
@@ -33,9 +33,8 @@
                          <i class="fal fa-location-dot"></i>
                      </div>
                      <div class="media-body">
-                         <p class="footer-contact_text">Our university location:</p>
-                         <a href="https://www.google.com/maps" class="footer-contact_link">147/I, Green Road,
-                             Dhaka</a>
+                         <p class="footer-contact_text">Our school location:</p>
+                         <a href="https://www.google.com/maps" class="footer-contact_link">Balubadhi</a>
                      </div>
                  </div>
              </div>
