@@ -36,18 +36,27 @@
                             <h1>Holy Field School</h1>
                             <h2 class="mt-3">Sign in</h2>
 
-                            <form action="index.html">
-                                <div class="form-group">
-                                    <label>Username <span class="login-danger">*</span></label>
-                                    <input class="form-control" type="text">
+                            <form action="{{url('login')}}" method="POST">
+                                @csrf
+                                <div class="form-group mb-0">
+                                    <label>Email <span class="login-danger">*</span></label>
+                                    <input class="form-control" type="text" name="email">
                                     <span class="profile-views"><i class="fas fa-user-circle"></i></span>
+                                   
                                 </div>
-                                <div class="form-group">
+                                 @error('email')
+                                        <p class="text-danger">{{$message}}</p>
+                                    @enderror
+                                <div class="form-group mt-4 mb-0">
                                     <label>Password <span class="login-danger">*</span></label>
-                                    <input class="form-control pass-input" type="text">
+                                    <input class="form-control pass-input" type="text" name="password">
                                     <span class="profile-views feather-eye toggle-password"></span>
+                                    
                                 </div>
-                                <div class="forgotpass">
+                                 @error('password')
+                                        <p class="text-danger">{{$message}}</p>
+                                    @enderror
+                                <div class="forgotpass mt-2">
                                     <div class="remember-me">
                                         <label class="custom_check mr-2 mb-0 d-inline-flex remember-me"> Remember me
                                             <input type="checkbox" name="radio">
