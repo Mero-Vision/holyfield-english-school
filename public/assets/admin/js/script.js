@@ -1,4 +1,8 @@
-
+/*
+Author       : Dreamguys
+Template Name: Preskool - Bootstrap Admin Template
+Version      : 1.0
+*/
 
 (function($) {
     "use strict";
