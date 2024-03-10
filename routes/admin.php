@@ -1,5 +1,6 @@
 <?php
 
+use App\Http\Controllers\Admin\AdminSettingController;
 use App\Http\Controllers\Admin\DashboardController;
 use App\Http\Controllers\Admin\LoginController;
 use App\Http\Controllers\Admin\ProfileController;
@@ -26,5 +27,9 @@ Route::group(['middleware'=>'auth','prefix'=>'admin'],function(){
     Route::get('dashboard',[DashboardController::class,'index']);
 
     Route::get('profile', [ProfileController::class, 'index']);
+
+
+    Route::get('settings/general-settings', [AdminSettingController::class, 'generalSettingIndex']);
+    Route::get('settings/localization-settings', [AdminSettingController::class, 'localizationSettingIndex']);
     
 });

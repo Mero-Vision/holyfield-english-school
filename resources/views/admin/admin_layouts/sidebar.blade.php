@@ -116,9 +116,10 @@
                         <li><a href="edit-blog.html">Edit Blog</a></li>
                     </ul>
                 </li>
+                --}}
                 <li>
-                    <a href="settings.html"><i class="fas fa-cog"></i> <span>Settings</span></a>
-                </li> --}}
+                    <a href="{{url('admin/settings/general-settings')}}"><i class="fas fa-cog"></i> <span>Settings</span></a>
+                </li> 
                 
                 
             </ul>

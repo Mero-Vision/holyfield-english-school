@@ -41,6 +41,9 @@
 
         </div>
 
+
+         @include('admin.admin_layouts.footer2')
+
     </div>
 
 
