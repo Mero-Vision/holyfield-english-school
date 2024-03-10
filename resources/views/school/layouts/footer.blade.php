@@ -24,7 +24,8 @@
                      </div>
                      <div class="media-body">
                          <p class="footer-contact_text">Email us 24/7 hours:</p>
-                         <a href="mailto:info.holyfield.dipen@gmail.com" class="footer-contact_link">info.holyfield.dipen@gmail.com</a>
+                         <a href="mailto:info.holyfield.dipen@gmail.com"
+                             class="footer-contact_link">info.holyfield.dipen@gmail.com</a>
                      </div>
                  </div>
                  <div class="divider"></div>
@@ -83,23 +84,21 @@
                              <div class="menu-all-pages-container">
                                  <ul class="menu">
                                      <li>
-                                         <a href="course.html">Life Coach</a>
+                                         <a href="course.html">Gallery</a>
                                      </li>
                                      <li>
-                                         <a href="course.html">Business Coach</a>
+                                         <a href="course.html">Events</a>
                                      </li>
                                      <li>
-                                         <a href="course.html">Health Coach</a>
+                                         <a href="course.html">Blogs</a>
                                      </li>
                                      <li>
-                                         <a href="course.html">Development</a>
+                                         <a href="course.html">Contact Us</a>
                                      </li>
                                      <li>
-                                         <a href="course.html">Web Design</a>
+                                         <a href="course.html">About Us</a>
                                      </li>
-                                     <li>
-                                         <a href="course.html">SEO Optimize</a>
-                                     </li>
+
                                  </ul>
                              </div>
                          </div>
@@ -110,40 +109,56 @@
                              <div class="menu-all-pages-container">
                                  <ul class="menu">
                                      <li>
-                                         <a href="contact.html">Community</a>
+                                         <a href="contact.html">Routines</a>
                                      </li>
                                      <li>
-                                         <a href="contact.html">Support</a>
+                                         <a href="contact.html">Exam Results</a>
                                      </li>
                                      <li>
-                                         <a href="contact.html">Video Guides</a>
+                                         <a href="contact.html">Test Results</a>
                                      </li>
                                      <li>
-                                         <a href="contact.html">Documentation</a>
+                                         <a href="contact.html">Announcement</a>
                                      </li>
                                      <li>
-                                         <a href="contact.html">Security</a>
+                                         <a href="contact.html">Academic Calender</a>
                                      </li>
-                                     <li>
-                                         <a href="contact.html">Template</a>
-                                     </li>
+                                     
                                  </ul>
                              </div>
                          </div>
                      </div>
                      <div class="col-md-6 col-xxl-3 col-xl-3">
-                         <div class="widget newsletter-widget footer-widget">
+                         <div class="widget widget_contact footer-widget">
                              <h3 class="widget_title">Get in touch!</h3>
-                             <p class="footer-text">Subscribe our newsletter to get our latest Update & news</p>
-                             <form class="newsletter-form form-group">
-                                 <input class="form-control" type="email" placeholder="Email Email" required="">
-                                 <i class="far fa-envelope"></i>
-                                 <button type="submit" class="th-btn style3">
-                                     Subscribe Now <i class="far fa-arrow-right ms-1"></i>
-                                 </button>
-                             </form>
+                             <p class="contact-text">Getting in touch with us is easy!
+                                 Whether you have questions about our curriculum, admissions process, extracurricular
+                                 activities, or anything else, we're here to help.</p>
+                             <div class="th-widget-contact">
+                                 <div class="info-box-wrap">
+                                     <div class="info-box_icon">
+                                         <i class="fas fa-location-dot"></i>
+                                     </div>
+                                     <p class="info-box_text">Kachankawal-07</p>
+                                 </div>
+                                 <div class="info-box-wrap">
+                                     <div class="info-box_icon">
+                                         <i class="fas fa-envelope"></i>
+                                     </div>
+                                     <a href="mailto:info.holyfield.dipen@gmail.com"
+                                         class="info-box_link">info.holyfield.dipen@gmail.com</a>
+                                 </div>
+                                 <div class="info-box-wrap">
+                                     <div class="info-box_icon">
+                                         <i class="fas fa-phone"></i>
+                                     </div>
+                                     <a href="tel:+9779840393746" class="info-box_link">+977 9840393746</a>
+                                 </div>
+                             </div>
                          </div>
                      </div>
+
+
                  </div>
              </div>
          </div>
@@ -152,7 +167,8 @@
                  <div class="row justify-content-between align-items-center">
                      <div class="col-md-7">
                          <p class="copyright-text">
-                             Copyright © <?php echo Date('Y'); ?>. Designed By <a href="https://merovision.com/" target="_blank">Mero Vision</a>.
+                             Copyright © <?php echo Date('Y'); ?>. Designed By <a href="https://merovision.com/"
+                                 target="_blank">Mero Vision</a>.
                              All Rights Reserved.
                          </p>
                      </div>
