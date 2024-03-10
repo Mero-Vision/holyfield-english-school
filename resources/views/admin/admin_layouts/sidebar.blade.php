@@ -15,7 +15,7 @@
                             class="menu-arrow"></span></a>
                     <ul>
                         <li><a href="#">Events</a></li>
-                        <li><a href="#">Blogs</a></li>
+                        <li><a href="{{url('admin/blogs/view')}}">Blogs</a></li>
                         <li><a href="#">Contact Us</a></li>
                         <li><a href="#">Admission Inquiry</a></li>
                     </ul>

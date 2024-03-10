@@ -87,10 +87,9 @@
                                                 <div class="form-group">
                                                     <label>Currency Symbol</label>
                                                     <select class="select form-control">
-                                                        <option selected="selected">$</option>
-                                                        <option>₹</option>
-                                                        <option>£</option>
-                                                        <option>€</option>
+                                                        <option selected="selected">Rs.</option>
+                                                        <option>NPR</option>
+                                                        <option>Rupees</option>
                                                     </select>
                                                 </div>
                                                 <div class="form-group mb-0">

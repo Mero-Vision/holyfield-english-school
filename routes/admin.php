@@ -1,5 +1,6 @@
 <?php
 
+use App\Http\Controllers\Admin\AdminBlogController;
 use App\Http\Controllers\Admin\AdminSettingController;
 use App\Http\Controllers\Admin\DashboardController;
 use App\Http\Controllers\Admin\LoginController;
@@ -27,6 +28,9 @@ Route::group(['middleware'=>'auth','prefix'=>'admin'],function(){
     Route::get('dashboard',[DashboardController::class,'index']);
 
     Route::get('profile', [ProfileController::class, 'index']);
+
+
+    Route::get('blogs/view', [AdminBlogController::class, 'index']);
 
 
     Route::get('settings/general-settings', [AdminSettingController::class, 'generalSettingIndex']);
