@@ -16,7 +16,7 @@ class AdminSeeder extends Seeder
     public function run(): void
     {
         $admindata = [
-            'name' => 'Admin One',
+            'name' => 'Dipen Limbu',
             'email' => 'dipenlimbu@gmail.com',
             'gender' => 'Male',
             'password' => Hash::make('Password'),
