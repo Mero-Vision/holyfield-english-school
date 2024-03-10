@@ -50,7 +50,7 @@
             <div class="container">
                 <div class="map-sec">
                     <div class="map">
-                        <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3644.7310056272386!2d89.2286059153658!3d24.00527418490799!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x39fe9b97badc6151%3A0x30b048c9fb2129bc!2sthemeholy!5e0!3m2!1sen!2sbd!4v1651028958211!5m2!1sen!2sbd" allowfullscreen="" loading="lazy"></iframe>
+                        <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3442.053258031518!2d88.0195066!3d26.446279200000003!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x39e5a93ebf327915%3A0xf321f08977742cd2!2sHOLYFIELD%20ENGLISH%20SCHOOL!5e1!3m2!1sen!2snp!4v1710079015786!5m2!1sen!2snp" allowfullscreen="" loading="lazy"></iframe>
                     </div>
                 </div>
                 <div class="row">
@@ -69,7 +69,7 @@
                                 <div class="media-body">
                                     <p class="contact-feature_label">Our Address</p>
                                     <a href="https://www.google.com/maps" class="contact-feature_link">
-                                        2690 Hiltona Street Victoria Road,<br>New York, Canada
+                                       Kachankawal-07
                                     </a>
                                 </div>
                             </div>
@@ -80,7 +80,7 @@
                                 <div class="media-body">
                                     <p class="contact-feature_label">Phone Number</p>
                                     <a href="tel:+011456586986" class="contact-feature_link">
-                                        Mobile:<span>(+65) - 48596 - 5789</span>
+                                        Mobile:<span>(+977) - 9840393746</span>
                                     </a>
                                     <a href="tel:+011456586986" class="contact-feature_link">
                                         Phone: <span>(+00) - 12543 - 4165</span>
@@ -93,8 +93,8 @@
                                 </div>
                                 <div class="media-body">
                                     <p class="contact-feature_label">Hours of Operation</p>
-                                    <span class="contact-feature_link">Monday - Friday: 09:00 - 20:00</span>
-                                    <span class="contact-feature_link">Sunday & Saturday: 10:30 - 22:00</span>
+                                    <span class="contact-feature_link">Sunday - Friday: 09:00 AM - 4:00 PM</span>
+                                    
                                 </div>
                             </div>
                         </div>

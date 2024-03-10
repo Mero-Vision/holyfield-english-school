@@ -14,7 +14,7 @@
                      </div>
                      <div class="media-body">
                          <p class="footer-contact_text">Call us any time:</p>
-                         <a href="tel+11234567890" class="footer-contact_link">+256 214 203 215</a>
+                         <a href="tel:9840393746" class="footer-contact_link">+977 9840393746</a>
                      </div>
                  </div>
                  <div class="divider"></div>
@@ -24,7 +24,7 @@
                      </div>
                      <div class="media-body">
                          <p class="footer-contact_text">Email us 24/7 hours:</p>
-                         <a href="mailto:info@holyfield.com" class="footer-contact_link">info@holyfield.com</a>
+                         <a href="mailto:info.holyfield.dipen@gmail.com" class="footer-contact_link">info.holyfield.dipen@gmail.com</a>
                      </div>
                  </div>
                  <div class="divider"></div>
@@ -34,7 +34,7 @@
                      </div>
                      <div class="media-body">
                          <p class="footer-contact_text">Our school location:</p>
-                         <a href="https://www.google.com/maps" class="footer-contact_link">Balubadhi</a>
+                         <a href="https://www.google.com/maps" class="footer-contact_link">Kachankawal-07</a>
                      </div>
                  </div>
              </div>
@@ -152,7 +152,7 @@
                  <div class="row justify-content-between align-items-center">
                      <div class="col-md-7">
                          <p class="copyright-text">
-                             Copyright © <?php echo Date('Y'); ?>. Designed By Hancie Phago.
+                             Copyright © <?php echo Date('Y'); ?>. Designed By <a href="https://merovision.com/" target="_blank">Mero Vision</a>.
                              All Rights Reserved.
                          </p>
                      </div>

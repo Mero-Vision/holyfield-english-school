@@ -40,7 +40,7 @@
 
                 </li>
                 <li>
-                    <a href="#">About Us</a>
+                    <a href="{{url('about-us')}}">About Us</a>
 
                 </li>
                 <li>
@@ -151,7 +151,7 @@
 
                                         </li>
                                         <li>
-                                            <a href="#">About Us</a>
+                                            <a href="{{url('about-us')}}">About Us</a>
 
                                         </li>
 
