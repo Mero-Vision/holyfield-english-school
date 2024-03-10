@@ -18,11 +18,11 @@ class AdminSeeder extends Seeder
         $admindata = [
             'name' => 'Dipen Limbu',
             'dob' => '2000-02-20',
-            'email' => 'dipenlimbu@gmail.com',
+            'email' => 'info.holyfield.dipen@gmail.com',
             'gender' => 'Male',
             'password' => Hash::make('Password'),
-            'address' => 'US',
-            'mobile_no' => '+5654475',
+            'address' => 'Kachankawal-07, Jhapa',
+            'mobile_no' => '9840393746',
             'email_verified_at' => Carbon::now(),
             'user_role' => 'admin',
 

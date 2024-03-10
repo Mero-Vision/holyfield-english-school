@@ -34,11 +34,11 @@
                                 <li class="nav-item">
                                     <a class="nav-link" href="{{url('admin/settings/general-settings')}}">General Settings</a>
                                 </li>
-                                <li class="nav-item active">
+                                <li class="nav-item ">
                                     <a class="nav-link" href="{{url('admin/settings/localization-settings')}}">Localization</a>
                                 </li>
                                 
-                                <li class="nav-item">
+                                <li class="nav-item active">
                                     <a class="nav-link" href="{{url('admin/settings/social-links-settings')}}">Social Links</a>
                                 </li>
                             </ul>
