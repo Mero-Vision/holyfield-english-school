@@ -117,7 +117,7 @@
                     </ul>
                 </li>
                 --}}
-                <li>
+                <li class="{{ request()->is('admin/settings*') ? 'active' : '' }}">
                     <a href="{{url('admin/settings/general-settings')}}"><i class="fas fa-cog"></i> <span>Settings</span></a>
                 </li> 
                 

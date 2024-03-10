@@ -37,7 +37,7 @@
                         </li>
                         
                         <li class="nav-item">
-                            <a class="nav-link" href="social-links.html">Social Links</a>
+                            <a class="nav-link" href="{{url('admin/settings/social-links-settings')}}">Social Links</a>
                         </li>
                        
                     </ul>

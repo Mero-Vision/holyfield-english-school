@@ -15,4 +15,8 @@ class AdminSettingController extends Controller
     {
         return view('admin.settings.localization_settings');
     }
+
+    public function socialLinksIndex(){
+        return view('admin.settings.social_links');
+    }
 }
