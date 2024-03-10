@@ -17,6 +17,7 @@ class AdminSeeder extends Seeder
     {
         $admindata = [
             'name' => 'Dipen Limbu',
+            'dob' => '2000-02-20',
             'email' => 'dipenlimbu@gmail.com',
             'gender' => 'Male',
             'password' => Hash::make('Password'),
