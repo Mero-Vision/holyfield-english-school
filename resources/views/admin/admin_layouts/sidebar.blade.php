@@ -14,10 +14,10 @@
                     <a href="#"><i class="fas fa-book"></i> <span> CMS</span> <span
                             class="menu-arrow"></span></a>
                     <ul>
-                        <li><a href="students.html">Events</a></li>
-                        <li><a href="student-details.html">Blogs</a></li>
-                        <li><a href="add-student.html">Contact Us</a></li>
-                        <li><a href="edit-student.html">Admission Inquiry</a></li>
+                        <li><a href="#">Events</a></li>
+                        <li><a href="#">Blogs</a></li>
+                        <li><a href="#">Contact Us</a></li>
+                        <li><a href="#">Admission Inquiry</a></li>
                     </ul>
                 </li>
                 
@@ -25,10 +25,10 @@
                     <a href="#"><i class="fas fa-graduation-cap"></i> <span> Students</span> <span
                             class="menu-arrow"></span></a>
                     <ul>
-                        <li><a href="students.html">Student List</a></li>
-                        <li><a href="student-details.html">Student View</a></li>
-                        <li><a href="add-student.html">Student Add</a></li>
-                        <li><a href="edit-student.html">Student Edit</a></li>
+                        <li><a href="">Student List</a></li>
+                        <li><a href="">Student View</a></li>
+                        <li><a href="">Student Add</a></li>
+                        <li><a href="">Student Edit</a></li>
                     </ul>
                 </li>
                 <li class="submenu">

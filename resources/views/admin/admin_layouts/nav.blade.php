@@ -1,11 +1,11 @@
 <div class="header">
 
             <div class="header-left">
-                <a href="{{url('admin/dashboard')}}" class="logo text-center">
-                    <img src="{{url('assets/school/img/logo.jpeg')}}" alt="Logo">
+                <a href="https://merovision.com/" target="_blank" class="logo text-center">
+                    <img src="{{url('assets/admin/img/company_logo.png')}}" alt="Logo">
                 </a>
-                <a href="{{url('admin/dashboard')}}" class="logo logo-small">
-                    <img src="{{url('assets/school/img/logo.jpeg')}}" alt="Logo" width="30" height="30">
+                <a href="https://merovision.com/" target="_blank"  class="logo logo-small">
+                    <img src="{{url('assets/admin/img/company_logo2.png')}}" alt="Logo" width="30" height="30">
                 </a>
             </div>
 
