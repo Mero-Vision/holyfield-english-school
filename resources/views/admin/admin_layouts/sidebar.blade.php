@@ -10,11 +10,11 @@
 
                 </li>
 
-                 <li class="submenu">
+                 <li class="submenu {{ request()->is('admin/cms*') ? 'active' : '' }}">
                     <a href="#"><i class="fas fa-book"></i> <span> CMS</span> <span
                             class="menu-arrow"></span></a>
                     <ul>
-                        <li><a href="{{url('admin/blogs/active-blogs')}}">Blogs</a></li>
+                        <li><a href="{{url('admin/cms/blogs/active-blogs')}}" class="{{ request()->is('admin/cms/blogs/active-blogs') ? 'active' : '' }}">Blogs</a></li>
                         <li><a href="#">Events</a></li>
                         <li><a href="#">Contact Us</a></li>
                         <li><a href="#">Admission Inquiry</a></li>

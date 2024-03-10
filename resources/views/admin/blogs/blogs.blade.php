@@ -19,12 +19,12 @@
                 <div class="row">
                     <div class="col-md-9">
                         <ul class="list-links mb-4">
-                            <li class="active"><a href="{{url('admin/blogs/active-blogs')}}">Active Blog</a></li>
-                            <li><a href="{{url('admin/blogs/active-blogs')}}">Pending Blog</a></li>
+                            <li class="active"><a href="{{url('admin/cms/blogs/active-blogs')}}">Active Blog</a></li>
+                            <li><a href="{{url('admin/cms/blogs/active-blogs')}}">Pending Blog</a></li>
                         </ul>
                     </div>
                     <div class="col-md-3 text-md-end">
-                        <a href="{{url('admin/blogs/add-blog')}}" class="btn btn-primary btn-blog mb-3"><i
+                        <a href="{{url('admin/cms/blogs/add-blog')}}" class="btn btn-primary btn-blog mb-3"><i
                                 class="feather-plus-circle me-1"></i> Add New</a>
                     </div>
                 </div>
