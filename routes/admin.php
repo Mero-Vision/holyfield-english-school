@@ -25,6 +25,8 @@ Route::post('login', [LoginController::class, 'login']);
 
 Route::group(['middleware'=>'auth','prefix'=>'admin'],function(){
 
+    Route::get('logout', [LoginController::class, 'logout']);
+
     Route::get('dashboard',[DashboardController::class,'index']);
 
     Route::get('profile', [ProfileController::class, 'index']);

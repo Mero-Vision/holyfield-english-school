@@ -49,10 +49,10 @@ class LoginController extends Controller
             auth()->logout();
 
             sweetalert()->addSuccess('Logout Successfully!');
-            return redirect('/');
+            return redirect('/login');
         } else {
             sweetalert()->addWarning('User is not authenticated!');
-            return redirect('/');
+            return redirect('/login');
         }
     }
 }
