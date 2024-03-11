@@ -23,9 +23,9 @@ class AdminEventController extends Controller
         foreach ($events as $event) {
             $formattedEvents[] = [
                 'title' => $event->event_name,
-                'start' => Carbon::now(), // Assuming start_date is a field in your Event model
-                'end' =>Carbon::now(),    // Assuming end_date is a field in your Event model
-                'className' => 'bg-primary',   // Example class name, you can customize this
+                'start' => Carbon::parse($event->event_date)->format('Y-m-d H:i:s'), 
+                'end' => Carbon::parse($event->event_date)->format('Y-m-d H:i:s'),    
+                'className' => 'bg-primary',   
             ];
         }
 
