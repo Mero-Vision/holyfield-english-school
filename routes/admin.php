@@ -2,6 +2,7 @@
 
 use App\Http\Controllers\Admin\AdminBlogController;
 use App\Http\Controllers\Admin\AdminSettingController;
+use App\Http\Controllers\Admin\AdminSiteSettingController;
 use App\Http\Controllers\Admin\DashboardController;
 use App\Http\Controllers\Admin\LoginController;
 use App\Http\Controllers\Admin\ProfileController;
@@ -39,5 +40,7 @@ Route::group(['middleware'=>'auth','prefix'=>'admin'],function(){
     Route::get('settings/general-settings', [AdminSettingController::class, 'generalSettingIndex']);
     Route::get('settings/localization-settings', [AdminSettingController::class, 'localizationSettingIndex']);
     Route::get('settings/social-links-settings', [AdminSettingController::class, 'socialLinksIndex']);
+
+    Route::post('settings/site-settings', [AdminSiteSettingController::class, 'store']);
     
 });

@@ -30,16 +30,18 @@
                 <div class="settings-menu-links">
                     <ul class="nav nav-tabs menu-tabs">
                         <li class="nav-item active">
-                            <a class="nav-link" href="{{url('admin/settings/general-settings')}}">General Settings</a>
+                            <a class="nav-link" href="{{ url('admin/settings/general-settings') }}">General Settings</a>
                         </li>
                         <li class="nav-item">
-                            <a class="nav-link" href="{{url('admin/settings/localization-settings')}}">Localization</a>
+                            <a class="nav-link"
+                                href="{{ url('admin/settings/localization-settings') }}">Localization</a>
                         </li>
-                        
+
                         <li class="nav-item">
-                            <a class="nav-link" href="{{url('admin/settings/social-links-settings')}}">Social Links</a>
+                            <a class="nav-link" href="{{ url('admin/settings/social-links-settings') }}">Social
+                                Links</a>
                         </li>
-                       
+
                     </ul>
                 </div>
 
@@ -47,18 +49,24 @@
                     <div class="col-md-6">
                         <div class="card">
                             <div class="card-header">
-                                <h5 class="card-title">Website Basic Details</h5>
+                                <h5 class="card-title">School Basic Details</h5>
                             </div>
                             <div class="card-body pt-0">
-                                <form>
+                                <form action="{{url('admin/settings/site-settings')}}" method="POST">
+                                    @csrf
                                     <div class="settings-form">
                                         <div class="form-group">
-                                            <label>Website Name <span class="star-red">*</span></label>
-                                            <input type="text" class="form-control" placeholder="Enter Website Name">
+                                            <label>School Name <span class="star-red">*</span></label>
+                                            @if (isset($data['school_name']))
+                                                <input type="text" value="{{ $data['school_name'] }}"
+                                                    class="form-control" name="school_name" />
+                                            @else
+                                                <input type="text" class="form-control" name="school_name" />
+                                            @endif
                                         </div>
-                                        
-                                        
-                                        
+
+
+
                                         <div class="form-group mb-0">
                                             <div class="settings-btns">
                                                 <button type="submit" class="btn btn-orange">Update</button>
@@ -83,7 +91,7 @@
                                             <input type="text" class="form-control"
                                                 placeholder="Enter Address Line 1">
                                         </div>
-                                       
+
                                         <div class="row">
                                             <div class="col-md-6">
                                                 <div class="form-group">
@@ -97,11 +105,11 @@
                                                     <select class="select form-control">
                                                         <option selected="selected">Select</option>
                                                         <option>Koshi Pradesh</option>
-                                                        
+
                                                     </select>
                                                 </div>
                                             </div>
-                                           
+
                                         </div>
                                         <div class="form-group mb-0">
                                             <div class="settings-btns">

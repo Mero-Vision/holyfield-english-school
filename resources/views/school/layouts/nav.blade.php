@@ -66,7 +66,7 @@
                             </li>
                             <li class="d-none d-xl-inline-block">
                                 <i class="far fa-envelope"></i>
-                                <a href="mailto:info@holyfield.com">info@holyfield.com</a>
+                                <a href="mailto:info.holyfield.dipen@gmail.com">info.holyfield.dipen@gmail.com</a>
                             </li>
                             <li>
                                 <i class="far fa-clock"></i>
