@@ -18,4 +18,5 @@
        <link rel="stylesheet" href="{{ url('assets/school/css/app.min.css') }}">
        <link rel="stylesheet" href="{{ url('assets/school/css/fontawesome.min.css') }}">
        <link rel="stylesheet" href="{{ url('assets/school/css/style.css') }}">
+       <meta name="google-site-verification" content="xWoZbWc005sABys2UI3hofd3tJwaAZamU6YE1ymTY6U" />
    </head>
