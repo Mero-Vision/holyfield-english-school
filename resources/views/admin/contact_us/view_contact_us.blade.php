@@ -62,6 +62,7 @@
                             </tbody>
 
                         </table>
+                        {{$contacts->links('pagination::bootstrap-5')}}
 
 
 

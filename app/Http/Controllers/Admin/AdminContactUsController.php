@@ -9,7 +9,7 @@ use Illuminate\Http\Request;
 class AdminContactUsController extends Controller
 {
     public function index(){
-        $contacts=ContactUs::latest()->get();
+        $contacts=ContactUs::latest()->paginate(7);
         return view('admin.contact_us.view_contact_us',compact('contacts'));
     }
 }
