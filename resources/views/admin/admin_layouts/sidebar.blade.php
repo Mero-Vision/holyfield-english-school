@@ -15,7 +15,7 @@
                             class="menu-arrow"></span></a>
                     <ul>
                         <li><a href="{{url('admin/cms/blogs/active-blogs')}}" class="{{ request()->is('admin/cms/blogs/active-blogs') ? 'active' : '' }}">Blogs</a></li>
-                        <li><a href="#">Events</a></li>
+                        <li><a href="{{url('admin/cms/events/view')}}" class="{{ request()->is('admin/cms/events/view') ? 'active' : '' }}">Events</a></li>
                         <li><a href="{{url('admin/cms/contact-us')}}" class="{{ request()->is('admin/cms/contact-us') ? 'active' : '' }}">Contact Us</a></li>
                         
                     </ul>
