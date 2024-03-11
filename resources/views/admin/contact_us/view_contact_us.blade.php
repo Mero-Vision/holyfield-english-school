@@ -24,7 +24,7 @@
 
 
                     <div class="card card-table">
-                        <table class="table border-0 star-student table-hover table-center mb-0 datatable table-striped">
+                        <table class="table border-0 star-student table-hover table-center mb-0 table-striped">
                             <thead>
                                 <tr>
                                     <th>ID</th>
