@@ -1,6 +1,7 @@
 <?php
 
 use App\Http\Controllers\Admin\AdminBlogController;
+use App\Http\Controllers\Admin\AdminContactUsController;
 use App\Http\Controllers\Admin\AdminSettingController;
 use App\Http\Controllers\Admin\AdminSiteSettingController;
 use App\Http\Controllers\Admin\DashboardController;
@@ -35,6 +36,7 @@ Route::group(['middleware'=>'auth','prefix'=>'admin'],function(){
 
     Route::get('cms/blogs/active-blogs', [AdminBlogController::class, 'index']);
     Route::get('cms/blogs/add-blog', [AdminBlogController::class, 'create']);
+     Route::get('cms/contact-us',[AdminContactUsController::class,'index']);
 
 
     Route::get('settings/general-settings', [AdminSettingController::class, 'generalSettingIndex']);
@@ -42,5 +44,8 @@ Route::group(['middleware'=>'auth','prefix'=>'admin'],function(){
     Route::get('settings/social-links-settings', [AdminSettingController::class, 'socialLinksIndex']);
 
     Route::post('settings/site-settings', [AdminSiteSettingController::class, 'store']);
+
+
+   
     
 });
