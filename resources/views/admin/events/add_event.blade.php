@@ -44,14 +44,24 @@
                                             <div class="form-group local-forms">
                                                 <label>Event Name <span class="login-danger">*</span></label>
                                                 <input type="text" class="form-control" name="event_name">
+                                                 @error('event_name')
+                                            <p class="text-danger">{{$message}}</p>
+                                                
+                                            @enderror
                                             </div>
+                                           
                                         </div>
                                         <div class="col-12 col-sm-4">
                                             <div class="form-group local-forms calendar-icon">
                                                 <label>Event Date <span class="login-danger">*</span></label>
                                                 <input class="form-control datetimepicker" type="text" name="event_date"
                                                     placeholder="DD-MM-YYYY">
+                                                     @error('event_date')
+                                            <p class="text-danger">{{$message}}</p>
+                                                
+                                            @enderror
                                             </div>
+                                            
                                         </div>
                                         <div class="col-12">
                                             <div class="student-submit">

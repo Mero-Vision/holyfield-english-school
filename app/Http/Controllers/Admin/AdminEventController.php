@@ -40,6 +40,12 @@ class AdminEventController extends Controller
 
     public function store(Request $request){
 
+        $request->validate([
+            'event_name'=>['required','string'],
+            'event_date'=>['required']
+            
+        ]);
+
 
         try{
 
