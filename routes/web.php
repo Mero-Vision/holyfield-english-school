@@ -4,6 +4,7 @@
 use App\Http\Controllers\School\ContactController;
 use App\Http\Controllers\School\HomeController;
 use App\Http\Controllers\School\SchoolAboutController;
+use App\Http\Controllers\School\SchoolTeacherController;
 use Illuminate\Support\Facades\Route;
 
 /*
@@ -23,3 +24,4 @@ Route::get('/',[HomeController::class,'index']);
 
 Route::get('contact',[ContactController::class,'index']);
 Route::get('about-us', [SchoolAboutController::class, 'index']);
+Route::get('teachers', [SchoolTeacherController::class, 'index']);

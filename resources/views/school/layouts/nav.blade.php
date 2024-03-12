@@ -16,13 +16,10 @@
                     <a href="{{ url('/') }}">Home</a>
 
                 </li>
-                <li>
-                    <a href="{{ url('/') }}">Home</a>
-
-                </li>
+              
 
                 <li>
-                    <a href="#">Teachers</a>
+                    <a href="{{url('teachers')}}">Teachers</a>
 
                 </li>
                 <li>
@@ -81,18 +78,36 @@
                             <li>
                                 <div class="header-social">
                                     <span class="social-title">Follow Us:</span>
-                                    <a href="https://www.facebook.com/">
-                                        <i class="fab fa-facebook-f"></i>
-                                    </a>
-                                    <a href="https://www.twitter.com/">
-                                        <i class="fab fa-twitter"></i>
-                                    </a>
-                                    <a href="https://www.linkedin.com/">
-                                        <i class="fab fa-linkedin-in"></i>
-                                    </a>
-                                    <a href="https://www.youtube.com/">
-                                        <i class="fab fa-youtube"></i>
-                                    </a>
+                                    @if (isset($data['facebook_link']))
+                                         <a href="{{ $data['facebook_link'] }}" target="_blank">
+                                         @else
+                                             <a href="#">
+                                     @endif
+
+                                     <i class="fab fa-facebook-f"></i>
+                                     </a>
+                                     @if (isset($data['twitter_link']))
+                                         <a href="{{ $data['twitter_link'] }}" target="_blank">
+                                         @else
+                                             <a href="#">
+                                     @endif
+                                     <i class="fab fa-twitter"></i>
+                                     </a>
+                                     @if (isset($data['youtube_link']))
+                                         <a href="{{ $data['youtube_link'] }}" target="_blank">
+                                         @else
+                                             <a href="#">
+                                     @endif
+                                     <i class="fab fa-youtube"></i>
+                                     </a>
+                                     @if (isset($data['instagram_link']))
+                                         <a href="{{ $data['instagram_link'] }}" target="_blank">
+                                         @else
+                                             <a href="#">
+                                     @endif
+                                         <i class="fab fa-instagram"></i>
+                                     </a>
+
 
                                 </div>
                             </li>
@@ -133,7 +148,7 @@
                                         </li>
 
                                         <li>
-                                            <a href="#">Teachers</a>
+                                            <a href="{{url('teachers')}}">Teachers</a>
 
                                         </li>
                                         <li>
