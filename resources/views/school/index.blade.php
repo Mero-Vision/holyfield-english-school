@@ -559,7 +559,7 @@
                             <p class="cta-text">Holyfield English School offers a streamlined admission process
                                 designed to welcome students into a vibrant learning community. </p>
                         </div>
-                        <a href="about.html" class="th-btn style8">
+                        <a href="{{url('contact')}}" class="th-btn style8">
                             Apply For Admission<i class="fas fa-arrow-right ms-1"></i>
                         </a>
                     </div>

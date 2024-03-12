@@ -59,7 +59,7 @@ class AdminSiteSettingController extends Controller
                     }
                 }
             });
-            sweetalert()->addSuccess("Site setting added successfully!");
+            sweetalert()->addSuccess("Setting data updated successfully!");
             return back();
         } catch (\Exception $e) {
             return back()->with('error', $e->getMessage());

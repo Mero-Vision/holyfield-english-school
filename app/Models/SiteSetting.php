@@ -21,11 +21,33 @@ class SiteSetting extends BaseModel implements HasMedia
             "display_text" => "School Name"
         ],
 
-        "logo" => [
-            "type" => "image",
-            "element" => "image",
+       
+
+        "facebook_link" => [
+            "type" => "text",
+            "element" => "text",
             "visible" => 1,
-            "display_text" => "Site Logo"
+            "display_text" => "Facebook Link"
+        ],
+
+        "twitter_link" => [
+            "type" => "text",
+            "element" => "text",
+            "visible" => 1,
+            "display_text" => "Twitter Link"
+        ],
+
+        "youtube_link" => [
+            "type" => "text",
+            "element" => "text",
+            "visible" => 1,
+            "display_text" => "Youtube Link"
+        ],
+        "instagram_link" => [
+            "type" => "text",
+            "element" => "text",
+            "visible" => 1,
+            "display_text" => "Instagram Link"
         ],
 
 
