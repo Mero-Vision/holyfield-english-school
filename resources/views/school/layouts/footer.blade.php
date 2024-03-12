@@ -67,18 +67,29 @@
 
                                      <i class="fab fa-facebook-f"></i>
                                      </a>
-                                     <a href="https://www.twitter.com/">
-                                         <i class="fab fa-twitter"></i>
+                                     @if (isset($data['twitter_link']))
+                                         <a href="{{ $data['twitter_link'] }}" target="_blank">
+                                         @else
+                                             <a href="#">
+                                     @endif
+                                     <i class="fab fa-twitter"></i>
                                      </a>
-                                     <a href="https://www.linkedin.com/">
-                                         <i class="fab fa-linkedin-in"></i>
+                                     @if (isset($data['youtube_link']))
+                                         <a href="{{ $data['youtube_link'] }}" target="_blank">
+                                         @else
+                                             <a href="#">
+                                     @endif
+                                     <i class="fab fa-youtube"></i>
                                      </a>
-                                     <a href="https://www.youtube.com/">
-                                         <i class="fab fa-youtube"></i>
+                                     @if (isset($data['instagram_link']))
+                                         <a href="{{ $data['instagram_link'] }}" target="_blank">
+                                         @else
+                                             <a href="#">
+                                     @endif
+                                         <i class="fab fa-instagram"></i>
                                      </a>
-                                     <a href="https://www.skype.com/">
-                                         <i class="fab fa-skype"></i>
-                                     </a>
+
+
                                  </div>
                              </div>
                          </div>
