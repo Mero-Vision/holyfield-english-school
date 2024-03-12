@@ -31,13 +31,13 @@
 
                 <div class="student-group-form">
                     <div class="row">
-                        
+
                         <div class="col-lg-3 col-md-6">
                             <div class="form-group">
                                 <input type="text" class="form-control" placeholder="Search by Name ...">
                             </div>
                         </div>
-                         <div class="col-lg-3 col-md-6">
+                        <div class="col-lg-3 col-md-6">
                             <div class="form-group">
                                 <input type="text" class="form-control" placeholder="Search by Email ...">
                             </div>
@@ -70,10 +70,10 @@
                                     <th>Profile Image</th>
                                     <th>Name</th>
                                     <th>Email</th>
-                                     <th>DOB</th>
+                                    <th>DOB</th>
                                     <th>Mobile No</th>
                                     <th>Address</th>
-                                    
+
                                 </tr>
 
                             </thead>
@@ -82,19 +82,32 @@
                                 @forelse ($teachers as $teacher)
                                     <tr>
                                         <td>{{ $teacher->id }}</td>
-                                        <td><img src="{{$teacher->getFirstMediaUrl('teacher_image','preview') }}" style="max-width: 60px;"/></td>
+                                        <td>
+
+                                            @if ($teacher->getFirstMediaUrl('teacher_image', 'preview'))
+                                                <img src="{{ $teacher->getFirstMediaUrl('teacher_image', 'preview') }}"
+                                                    alt="Teacher" style="max-width: 60px;">
+                                            @else
+                                                <img src="{{ url('assets/school/img/avater.png') }}" alt="Another Image"
+                                                    style="max-width: 60px;">
+                                            @endif
+                                        </td>
+
+
                                         <td>{{ $teacher->teacher_name }}</td>
                                         <td>{{ $teacher->email }}</td>
-                                         <td>{{ $teacher->dob }}</td>
+                                        <td>{{ $teacher->dob }}</td>
                                         <td>{{ $teacher->mobile_no }}</td>
 
 
                                         <td>{{ $teacher->address }}</td>
-                                       
+
                                     </tr>
                                 @empty
+                                <td colspan="7">
                                     <img src="{{ url('assets/school/img/Empty-rafiki.png') }}"
                                         class="img-fluid mx-auto d-block" alt="Empty Data" style="max-width: 40%" />
+                                </td>
                                 @endforelse
 
                             </tbody>
@@ -119,7 +132,7 @@
 
 
 
-                
+
             </div>
         </div>
 
