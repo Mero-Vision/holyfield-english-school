@@ -4,6 +4,7 @@ namespace App\Http\Controllers\School;
 
 use App\Http\Controllers\Controller;
 use App\Models\SiteSetting;
+use App\Models\Teacher;
 use Illuminate\Http\Request;
 
 class SchoolTeacherController extends Controller
@@ -21,7 +22,9 @@ class SchoolTeacherController extends Controller
                 $data[$item->key] = $item->value;
             }
         }
+
+        $teachers = Teacher::latest()->get();
        
-        return view('school.teachers',compact('data'));
+        return view('school.teachers',compact('data', 'teachers'));
     }
 }

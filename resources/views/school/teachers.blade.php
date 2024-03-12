@@ -52,25 +52,38 @@
     <div class="team-area overflow-hidden space">
         <div class="container">
             <div class="row align-items-center gy-4">
-                <div class="col-sm-6 col-lg-4 col-xl-3">
-                    <div class="team-card style3">
-                        <div class="team-img-wrap">
-                            <div class="team-img">
-                                <img src="assets/img/team/team_1_1.jpg" alt="Team">
-                            </div>
-                        </div>
-                        <div class="team-hover-wrap">
 
-                            <div class="team-content">
-                                <h3 class="team-title">
-                                    <a href="team-details.html">Hirmar Ubunti</a>
-                                </h3>
-                                <span class="team-desig">Instructor</span>
+                @forelse ($teachers as $teacher)
+                    <div class="col-sm-6 col-lg-4 col-xl-3">
+                        <div class="team-card style3">
+                            <div class="team-img-wrap">
+                                <div class="team-img">
+                                    @if ($teacher->getFirstMediaUrl('teacher_image', 'preview'))
+                                        <img src="{{ $teacher->getFirstMediaUrl('teacher_image', 'preview') }}"
+                                            alt="Teacher">
+                                    @else
+                                        <img src="{{ url('assets/school/img/avater.png') }}" alt="Another Image" style="width: 327px; height:250px;">
+                                    @endif
+                                </div>
                             </div>
+                            <div class="team-hover-wrap">
 
+                                <div class="team-content">
+                                    <h3 class="team-title">
+                                        <a href="">{{ $teacher->teacher_name }}</a>
+                                    </h3>
+                                    <span class="team-desig">{{ $teacher->position }}</span>
+                                </div>
+
+                            </div>
                         </div>
                     </div>
-                </div>
+                @empty
+                    <img src="{{ url('assets/school/img/no-event.png') }}" class="mx-auto d-block"
+                        style="max-width:20%" />
+                    <h5 class="text-center">No Teacher Data</h5>
+                @endforelse
+
 
 
 

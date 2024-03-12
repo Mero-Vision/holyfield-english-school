@@ -12,7 +12,7 @@
         </div>
         <div class="th-mobile-menu">
             <ul>
-                <li>
+                <li class="{{ request()->is('/') ? 'active' : '' }}">
                     <a href="{{ url('/') }}">Home</a>
 
                 </li>
@@ -142,7 +142,7 @@
                             <div class="col-auto">
                                 <nav class="main-menu d-none d-lg-inline-block">
                                     <ul>
-                                        <li>
+                                        <li class="{{ request()->is('/') ? 'active' : '' }}">
                                             <a href="{{ url('/') }}">Home</a>
 
                                         </li>
