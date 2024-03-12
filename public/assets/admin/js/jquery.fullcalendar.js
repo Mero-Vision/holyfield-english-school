@@ -133,12 +133,12 @@
         url: '/admin/cms/events',
         type: 'GET',
         success: function(events) {
-            // Call Calendar initialization function after fetching events
+          
             initCalendar(events);
         },
         error: function(xhr, status, error) {
             console.error('Error fetching events:', error);
-            // If there's an error fetching events, you can choose to handle it accordingly
+           
         }
     });
 });

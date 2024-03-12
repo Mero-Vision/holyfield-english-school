@@ -7,6 +7,7 @@ use App\Models\Event;
 use Carbon\Carbon;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Date;
+use Illuminate\Support\Facades\DB;
 
 class AdminEventController extends Controller
 {
@@ -18,7 +19,7 @@ class AdminEventController extends Controller
     {
         $events = Event::all();
 
-        // Transform events into the format expected by the calendar
+       
         $formattedEvents = [];
         foreach ($events as $event) {
             $formattedEvents[] = [
@@ -29,7 +30,38 @@ class AdminEventController extends Controller
             ];
         }
 
-        // Return the formatted events
+       
         return response()->json($formattedEvents);
+    }
+
+    public function addEventIndex(){
+        return view('admin.events.add_event');
+    }
+
+    public function store(Request $request){
+
+
+        try{
+
+            $event=DB::transaction(function()use($request){
+                $event=Event::create([
+                    'user_id'=>auth()->user()->id,
+                    'event_name'=>$request->event_name,
+                    'event_date'=>$request->event_date,
+                    
+                    
+                ]);
+                return $event;
+                
+            });
+            if($event){
+                return back()->with('success','Event created successfully!');
+            }
+            
+        }
+        catch(\Exception $e){
+            return back()->with('error',$e->getMessage());
+            
+        }
     }
 }

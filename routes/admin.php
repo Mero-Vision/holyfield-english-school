@@ -23,7 +23,7 @@ use Illuminate\Support\Facades\Route;
 
 
 
-Route::get('login', [LoginController::class, 'index']);
+Route::get('login', [LoginController::class, 'index'])->name('login');
 Route::post('login', [LoginController::class, 'login']);
 
 Route::group(['middleware'=>'auth','prefix'=>'admin'],function(){
@@ -40,6 +40,8 @@ Route::group(['middleware'=>'auth','prefix'=>'admin'],function(){
      Route::get('cms/contact-us',[AdminContactUsController::class,'index']);
     Route::get('cms/events/view', [AdminEventController::class, 'index']);
     Route::get('cms/events', [AdminEventController::class, 'eventData']);
+    Route::get('cms/events/add', [AdminEventController::class, 'addEventIndex']);
+    Route::post('cms/events/add', [AdminEventController::class, 'store']);
 
 
     Route::get('settings/general-settings', [AdminSettingController::class, 'generalSettingIndex']);
