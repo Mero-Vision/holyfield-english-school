@@ -116,10 +116,7 @@
 
    
     @include('admin.admin_layouts.footer')
-    <script src="{{ url('assets/admin/js/moment.min.js') }}"></script>
-    <script src="{{ url('assets/admin/js/jquery-ui.min.js') }}"></script>
-    <script src="{{ url('assets/admin/js/fullcalendar.min.js') }}"></script>
-    <script src="{{ url('assets/admin/js/jquery.fullcalendar.js') }}"></script>
+  
 
 </body>
 

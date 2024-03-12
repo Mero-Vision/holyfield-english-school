@@ -22,7 +22,7 @@
                         <div class="col">
                             <h3 class="page-title">Events</h3>
                             <ul class="breadcrumb">
-                                <li class="breadcrumb-item"><a href="{{url('admin/dashboard')}}">Dashboard</a></li>
+                                <li class="breadcrumb-item"><a href="{{ url('admin/dashboard') }}">Dashboard</a></li>
                                 <li class="breadcrumb-item active">Events</li>
                             </ul>
                         </div>
@@ -32,7 +32,7 @@
                     <div class="row align-items-center">
                         <div class="col"></div>
                         <div class="col-auto text-end float-end ms-auto">
-                            <a href="{{url('admin/cms/events/add')}}" class="btn btn-primary">Add New Event</a>
+                            <a href="{{ url('admin/cms/events/add') }}" class="btn btn-primary">Add New Event</a>
                         </div>
                     </div>
                 </div>
@@ -74,9 +74,12 @@
 
     </div>
 
-
     @include('admin.admin_layouts.footer')
-   
+
+    <script src="{{ url('assets/admin/js/jquery-ui.min.js') }}"></script>
+    <script src="{{ url('assets/admin/js/fullcalendar.min.js') }}"></script>
+    <script src="{{ url('assets/admin/js/jquery.fullcalendar.js') }}"></script>
+
 </body>
 
 </html>

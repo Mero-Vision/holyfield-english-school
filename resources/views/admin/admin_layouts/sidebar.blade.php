@@ -30,18 +30,17 @@
                         <li><a href="">Student Add</a></li>
                         <li><a href="">Student Edit</a></li>
                     </ul>
-                </li>
-                <li class="submenu">
+                </li> --}}
+              <li class="submenu {{ request()->is('admin/teachers*') ? 'active' : '' }}">
                     <a href="#"><i class="fas fa-chalkboard-teacher"></i> <span> Teachers</span> <span
                             class="menu-arrow"></span></a>
                     <ul>
-                        <li><a href="teachers.html">Teacher List</a></li>
-                        <li><a href="teacher-details.html">Teacher View</a></li>
-                        <li><a href="add-teacher.html">Teacher Add</a></li>
-                        <li><a href="edit-teacher.html">Teacher Edit</a></li>
+                        <li><a href="">Teacher List</a></li>
+                        <li><a href="{{url('admin/teachers/add')}}" class="{{ request()->is('admin/teachers/add') ? 'active' : '' }}">Teacher Add</a></li>
+                        
                     </ul>
-                </li>
-                <li class="submenu">
+                </li> 
+                {{-- <li class="submenu">
                     <a href="#"><i class="fas fa-building"></i> <span> Departments</span> <span
                             class="menu-arrow"></span></a>
                     <ul>
@@ -115,8 +114,8 @@
                         <li><a href="add-blog.html">Add Blog</a></li>
                         <li><a href="edit-blog.html">Edit Blog</a></li>
                     </ul>
-                </li>
-                --}}
+                </li> --}}
+                
                 <li class="{{ request()->is('admin/settings*') ? 'active' : '' }}">
                     <a href="{{url('admin/settings/general-settings')}}"><i class="fas fa-cog"></i> <span>Settings</span></a>
                 </li> 

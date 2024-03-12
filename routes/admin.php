@@ -5,9 +5,11 @@ use App\Http\Controllers\Admin\AdminContactUsController;
 use App\Http\Controllers\Admin\AdminEventController;
 use App\Http\Controllers\Admin\AdminSettingController;
 use App\Http\Controllers\Admin\AdminSiteSettingController;
+use App\Http\Controllers\Admin\AdminTeacherController;
 use App\Http\Controllers\Admin\DashboardController;
 use App\Http\Controllers\Admin\LoginController;
 use App\Http\Controllers\Admin\ProfileController;
+use App\Models\Teacher;
 use Illuminate\Support\Facades\Route;
 
 /*
@@ -49,6 +51,9 @@ Route::group(['middleware'=>'auth','prefix'=>'admin'],function(){
     Route::get('settings/social-links-settings', [AdminSettingController::class, 'socialLinksIndex']);
 
     Route::post('settings/site-settings', [AdminSiteSettingController::class, 'store']);
+
+
+    Route::get('teachers/add',[AdminTeacherController::class,'index']);
 
    
 
