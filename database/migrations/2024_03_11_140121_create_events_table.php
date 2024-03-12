@@ -13,9 +13,12 @@ return new class extends Migration
     {
         Schema::create('events', function (Blueprint $table) {
             $table->id();
-            $table->foreignId('user_id')->nullable();
+            $table->string('published_by')->nullable();
             $table->string('event_name');
             $table->string('slug')->nullable();
+            $table->string('address')->nullable();
+            $table->string('start_time')->nullable();
+            $table->string('end_time')->nullable();
             $table->string('event_date')->nullable();
             $table->timestamps();
         });

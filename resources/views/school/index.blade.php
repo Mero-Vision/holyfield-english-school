@@ -33,7 +33,7 @@
                     <div class="row align-items-center justify-content-center">
                         <div class="col-md-6">
                             <div class="hero-style1">
-                               
+
                                 <h1 class="hero-title text-white" data-ani="slideinleft" data-ani-delay="0.4s">
                                     Education Create Better <span class="text-theme">Future.</span>
                                 </h1>
@@ -75,7 +75,7 @@
                     <div class="row align-items-center justify-content-center">
                         <div class="col-md-6">
                             <div class="hero-style1">
-                               
+
                                 <h1 class="hero-title text-white" data-ani="slideinleft" data-ani-delay="0.4s">
                                     Holy Field Leads To A Brighter <span class="text-theme">Future.</span>
                                 </h1>
@@ -117,7 +117,7 @@
                     <div class="row align-items-center justify-content-center">
                         <div class="col-md-6">
                             <div class="hero-style1">
-                               
+
                                 <h1 class="hero-title text-white" data-ani="slideinleft" data-ani-delay="0.4s">
                                     The Best Education <span class="text-theme">Institute.</span>
                                 </h1>
@@ -573,13 +573,13 @@
             </a>
         </div>
     </div>
-    
-    
-    
-  
-    <section class="space" data-bg-src="{{url('assets/school/img/event-bg_1.png')}}">
+
+
+
+
+    <section class="space" data-bg-src="{{ url('assets/school/img/event-bg_1.png') }}">
         <div class="shape-mockup event-shape1 jump" data-top="0" data-left="-60px">
-            <img src="{{url('assets/school/img/team-shape_1_1.png')}}" alt="img">
+            <img src="{{ url('assets/school/img/team-shape_1_1.png') }}" alt="img">
         </div>
         <div class="container">
             <div class="title-area text-center">
@@ -592,55 +592,67 @@
             <div class="row slider-shadow event-slider-1 th-carousel gx-70" data-slide-show="3"
                 data-lg-slide-show="3" data-md-slide-show="1" data-sm-slide-show="1" data-xs-slide-show="1"
                 data-arrows="true">
-                <div class="col-lg-6 col-xl-4">
-                    <div class="event-card">
-                        <div class="event-card_img" data-mask-src="{{url('assets/school/img/event_img-shape.png')}}">
-                            <img src="{{url('assets/school/img/event_img-1.png')}}" alt="event">
-                        </div>
-                        <div class="event-card_content">
-                            <div class="event-author">
-                                <div class="avater">
-                                    <img src="{{url('assets/school/img/event-author1.png')}}" alt="avater">
+
+                @forelse ($upComingEvents as $upComingEvent)
+                    <div class="col-lg-6 col-xl-4">
+                        <div class="event-card">
+
+                            <div class="event-card_content">
+
+                                <div class="event-meta">
+                                    <p>
+                                        <i class="fal fa-location-dot"></i>
+                                        259, NewYork,
+                                    </p>
+                                    <p>
+                                        <i class="fal fa-clock"></i>
+                                        08:00 am - 10:00 am
+                                    </p>
                                 </div>
-                                <div class="details">
-                                    <span class="author-name">David Smith</span>
-                                    <p class="author-desig">Chief - Executive</p>
+                                <h3 class="event-card_title">
+                                    <a href="event-details.html">What Soul Can Tech Us About Web Design</a>
+                                </h3>
+
+                                <div class=" text-left">
+                                    <div class="avater">
+                                        <img src="{{ url('assets/school/img/event-author1.png') }}" alt="avater">
+                                    </div>
+                                    <div class="details">
+                                        <span class="author-name">Published By</span>
+                                        <p class="author-desig">Chief - Executive</p>
+                                    </div>
                                 </div>
-                            </div>
-                            <div class="event-meta">
-                                <p>
-                                    <i class="fal fa-location-dot"></i>
-                                    259, NewYork,
-                                </p>
-                                <p>
-                                    <i class="fal fa-clock"></i>
-                                    08:00 am - 10:00 am
-                                </p>
-                            </div>
-                            <h3 class="event-card_title">
-                                <a href="event-details.html">What Soul Can Tech Us About Web Design</a>
-                            </h3>
-                            <div class="event-card_bottom">
-                                <a href="event-details.html" class="th-btn">
-                                    View Event <i class="far fa-arrow-right ms-1"></i>
-                                </a>
-                            </div>
-                            <div class="event-card-shape jump">
-                                <img src="{{url('assets/school/img/event-box-shape1.png')}}" alt="img">
+                                {{-- <div class="event-card_bottom">
+                                    <a href="event-details.html" class="th-btn">
+                                        View Event <i class="far fa-arrow-right ms-1"></i>
+                                    </a>
+                                </div> --}}
+                                <div class="event-card-shape jump">
+                                    <img src="{{ url('assets/school/img/event-box-shape1.png') }}" alt="img">
+                                </div>
                             </div>
                         </div>
                     </div>
-                </div>
+
+                @empty
+                 
+                @endforelse
                 
-                
+
+
+
             </div>
+            @if (!is_Null($upComingEvents))
+            <img src="{{url('assets/school/img/no-event.png')}}" class="mx-auto d-block" style="max-width:20%"/>
+                <h5 class="text-center">Currently, there are no upcoming events.</h5>
+            @endif
         </div>
     </section>
 
-    
-   
-    
-   @include('school.layouts.footer')
+
+
+
+    @include('school.layouts.footer')
 </body>
 
 </html>
