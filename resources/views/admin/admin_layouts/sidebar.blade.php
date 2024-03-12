@@ -35,7 +35,7 @@
                     <a href="#"><i class="fas fa-chalkboard-teacher"></i> <span> Teachers</span> <span
                             class="menu-arrow"></span></a>
                     <ul>
-                        <li><a href="">Teacher List</a></li>
+                        <li><a href="{{url('admin/teachers/view')}}" class="{{ request()->is('admin/teachers/view') ? 'active' : '' }}">Teacher List</a></li>
                         <li><a href="{{url('admin/teachers/add')}}" class="{{ request()->is('admin/teachers/add') ? 'active' : '' }}">Teacher Add</a></li>
                         
                     </ul>

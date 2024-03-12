@@ -6,4 +6,4 @@
 <script src="{{ url('assets/admin/js/jquery.slimscroll.min.js') }}"></script>
 <script src="{{ url('assets/admin/js/script.js') }}"></script>
 <script src="{{ url('assets/admin/js/select2.min.js')}}"></script>
-<script src="https://unpkg.com/filepond/dist/filepond.js"></script>
+<script src="{{ url('assets/admin/js/filepond.js')}}"></script>

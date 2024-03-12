@@ -45,11 +45,11 @@
                                         <td>{{ $contact->email }}</td>
                                         <td>{{ $contact->phone_no }}</td>
                                         @if ($contact->subject === 'Complaint')
-                                            <td class="text-danger rounded">{{ $contact->subject }}</td>
+                                            <td><span class="badge badge-danger rounded">{{ $contact->subject }}</span></td>
                                         @elseif($contact->subject === 'Admission Inquiry')
-                                            <td class=" text-primary rounded">{{ $contact->subject }}</td>
+                                            <td><span class="badge badge-primary rounded">{{ $contact->subject }}</span></td>
                                         @elseif($contact->subject === 'Information Inquiry')
-                                            <td class="text-success rounded">{{ $contact->subject }}</td>
+                                            <td><span class="badge badge-success rounded">{{ $contact->subject }}</span></td>
                                         @endif
 
                                         <td>{{ $contact->message }}</td>

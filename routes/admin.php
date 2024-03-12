@@ -53,7 +53,9 @@ Route::group(['middleware'=>'auth','prefix'=>'admin'],function(){
     Route::post('settings/site-settings', [AdminSiteSettingController::class, 'store']);
 
 
+    Route::get('teachers/view', [AdminTeacherController::class, 'viewTeachersIndex']);
     Route::get('teachers/add',[AdminTeacherController::class,'index']);
+    Route::post('teachers/add', [AdminTeacherController::class, 'store']);
 
    
 
