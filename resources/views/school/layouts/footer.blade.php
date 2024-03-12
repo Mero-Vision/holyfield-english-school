@@ -59,8 +59,13 @@
                                      academic rigor, character development, and holistic growth.</p>
                                  <div class="th-social">
                                      <h6 class="title text-white">FOLLOW US ON:</h6>
-                                     <a href="https://www.facebook.com/">
-                                         <i class="fab fa-facebook-f"></i>
+                                     @if (isset($data['facebook_link']))
+                                         <a href="{{ $data['facebook_link'] }}" target="_blank">
+                                         @else
+                                             <a href="#">
+                                     @endif
+
+                                     <i class="fab fa-facebook-f"></i>
                                      </a>
                                      <a href="https://www.twitter.com/">
                                          <i class="fab fa-twitter"></i>
@@ -123,7 +128,7 @@
                                      <li>
                                          <a href="contact.html">Academic Calender</a>
                                      </li>
-                                     
+
                                  </ul>
                              </div>
                          </div>
