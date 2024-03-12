@@ -602,24 +602,29 @@
                                 <div class="event-meta">
                                     <p>
                                         <i class="fal fa-location-dot"></i>
-                                        259, NewYork,
+                                        {{ $upComingEvent->address }},
                                     </p>
                                     <p>
                                         <i class="fal fa-clock"></i>
-                                        08:00 am - 10:00 am
+                                        <?php
+                                        $startTime = new DateTime($upComingEvent->start_time);
+                                        $endTime = new DateTime($upComingEvent->end_time);
+                                        ?>
+                                        {{ $startTime->format('h:i A') }} - {{ $endTime->format('h:i A') }}
                                     </p>
                                 </div>
                                 <h3 class="event-card_title">
-                                    <a href="event-details.html">What Soul Can Tech Us About Web Design</a>
+                                    <a href="#">{{ $upComingEvent->event_name }}</a>
                                 </h3>
 
                                 <div class=" text-left">
                                     <div class="avater">
-                                        <img src="{{ url('assets/school/img/event-author1.png') }}" alt="avater">
+                                        <img src="{{ url('assets/school/img/avater.png') }}" alt="avater"
+                                            style="width: 30px">
                                     </div>
                                     <div class="details">
                                         <span class="author-name">Published By</span>
-                                        <p class="author-desig">Chief - Executive</p>
+                                        <p class="author-desig">{{ $upComingEvent->published_by }}</p>
                                     </div>
                                 </div>
                                 {{-- <div class="event-card_bottom">
@@ -635,15 +640,15 @@
                     </div>
 
                 @empty
-                 
                 @endforelse
-                
+
 
 
 
             </div>
-            @if (!is_Null($upComingEvents))
-            <img src="{{url('assets/school/img/no-event.png')}}" class="mx-auto d-block" style="max-width:20%"/>
+            @if ($upComingEvents->isEmpty())
+                <img src="{{ url('assets/school/img/no-event.png') }}" class="mx-auto d-block"
+                    style="max-width:20%" />
                 <h5 class="text-center">Currently, there are no upcoming events.</h5>
             @endif
         </div>

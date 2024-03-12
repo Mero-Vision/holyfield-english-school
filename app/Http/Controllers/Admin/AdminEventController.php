@@ -42,7 +42,10 @@ class AdminEventController extends Controller
 
         $request->validate([
             'event_name'=>['required','string'],
-            'event_date'=>['required']
+            'event_date'=>['required'],
+            'start_time'=>['required'],
+            'end_time'=>['required'],
+            'event_address'=>['required']
             
         ]);
 
@@ -51,9 +54,12 @@ class AdminEventController extends Controller
 
             $event=DB::transaction(function()use($request){
                 $event=Event::create([
-                    'user_id'=>auth()->user()->id,
+                    'published_by'=>auth()->user()->name,
                     'event_name'=>$request->event_name,
                     'event_date'=>$request->event_date,
+                    'start_time'=>$request->start_time,
+                    'end_time'=>$request->end_time,
+                    'address'=>$request->event_address,
                     
                     
                 ]);
