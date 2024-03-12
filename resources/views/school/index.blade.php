@@ -415,7 +415,7 @@
                         <div class="course-content">
 
                             <h3 class="course-title">
-                                <a href="course-details.html">Pure Drinking Water</a>
+                                <a href="">Pure Drinking Water</a>
                             </h3>
 
 
@@ -435,7 +435,7 @@
                         <div class="course-content">
 
                             <h3 class="course-title">
-                                <a href="course-details.html">Programs/Events</a>
+                                <a href="">Programs/Events</a>
                             </h3>
 
 
@@ -455,7 +455,7 @@
                         <div class="course-content">
 
                             <h3 class="course-title">
-                                <a href="course-details.html">ECA</a>
+                                <a href="">ECA</a>
                             </h3>
 
 
@@ -475,7 +475,7 @@
                         <div class="course-content">
 
                             <h3 class="course-title">
-                                <a href="course-details.html">Student Health Check-up</a>
+                                <a href="">Student Health Check-up</a>
                             </h3>
 
 
@@ -495,7 +495,7 @@
                         <div class="course-content">
 
                             <h3 class="course-title">
-                                <a href="course-details.html">Teacher Meeting</a>
+                                <a href="">Teacher Meeting</a>
                             </h3>
 
 
@@ -516,7 +516,7 @@
                         <div class="course-content">
 
                             <h3 class="course-title">
-                                <a href="course-details.html">Proper Classroom</a>
+                                <a href="">Proper Classroom</a>
                             </h3>
 
 
@@ -536,7 +536,7 @@
                         <div class="course-content">
 
                             <h3 class="course-title">
-                                <a href="course-details.html">Science and Art Exhibition</a>
+                                <a href="">Science and Art Exhibition</a>
                             </h3>
 
 
