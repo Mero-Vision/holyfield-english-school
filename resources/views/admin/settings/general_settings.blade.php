@@ -70,7 +70,7 @@
                                         <div class="form-group mb-0">
                                             <div class="settings-btns">
                                                 <button type="submit" class="btn btn-orange">Update</button>
-                                                <button type="submit" class="btn btn-grey">Cancel</button>
+                                               
                                             </div>
                                         </div>
                                     </div>
@@ -84,37 +84,48 @@
                                 <h5 class="card-title">Address Details</h5>
                             </div>
                             <div class="card-body pt-0">
-                                <form>
+                                <form action="{{url('admin/settings/site-settings')}}" method="POST">
+                                    @csrf
                                     <div class="settings-form">
                                         <div class="form-group">
-                                            <label>Address Line 1 <span class="star-red">*</span></label>
-                                            <input type="text" class="form-control"
-                                                placeholder="Enter Address Line 1">
+                                            <label>Phone No <span class="star-red">*</span></label>
+                                             @if (isset($data['phone_no']))
+                                                <input type="text" value="{{ $data['phone_no'] }}"
+                                                    class="form-control" name="phone_no" />
+                                            @else
+                                                <input type="text" class="form-control" name="phone_no" placeholder="Enter Mobile No"/>
+                                            @endif
+                                           
+                                        </div>
+                                        <div class="form-group">
+                                            <label>Email <span class="star-red">*</span></label>
+
+                                            @if (isset($data['email']))
+                                                <input type="text" value="{{ $data['email'] }}"
+                                                    class="form-control" name="email" />
+                                            @else
+                                                <input type="text" class="form-control" name="email"  placeholder="Enter Email"/>
+                                            @endif
+                                           
+                                        </div>
+                                        <div class="form-group">
+                                            <label>Address <span class="star-red">*</span></label>
+
+                                              @if (isset($data['address']))
+                                                <input type="text" value="{{ $data['address'] }}"
+                                                    class="form-control" name="address" />
+                                            @else
+                                                <input type="text" class="form-control" name="address"   placeholder="Enter Address"/>
+                                            @endif
+
+                                            
                                         </div>
 
-                                        <div class="row">
-                                            <div class="col-md-6">
-                                                <div class="form-group">
-                                                    <label>City <span class="star-red">*</span></label>
-                                                    <input type="text" class="form-control">
-                                                </div>
-                                            </div>
-                                            <div class="col-md-6">
-                                                <div class="form-group">
-                                                    <label>State/Province <span class="star-red">*</span></label>
-                                                    <select class="select form-control">
-                                                        <option selected="selected">Select</option>
-                                                        <option>Koshi Pradesh</option>
-
-                                                    </select>
-                                                </div>
-                                            </div>
-
-                                        </div>
+                                        
                                         <div class="form-group mb-0">
                                             <div class="settings-btns">
                                                 <button type="submit" class="btn btn-orange">Update</button>
-                                                <button type="submit" class="btn btn-grey">Cancel</button>
+                                               
                                             </div>
                                         </div>
                                     </div>

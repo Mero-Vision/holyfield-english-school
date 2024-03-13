@@ -50,6 +50,27 @@ class SiteSetting extends BaseModel implements HasMedia
             "display_text" => "Instagram Link"
         ],
 
+        "email" => [
+            "type" => "text",
+            "element" => "text",
+            "visible" => 1,
+            "display_text" => "Email"
+        ],
+
+        "phone_no" => [
+            "type" => "text",
+            "element" => "text",
+            "visible" => 1,
+            "display_text" => "Phone Number"
+        ],
+
+        "address" => [
+            "type" => "text",
+            "element" => "text",
+            "visible" => 1,
+            "display_text" => "Address"
+        ],
+
 
     ];
 }
