@@ -86,7 +86,7 @@
                                          @else
                                              <a href="#">
                                      @endif
-                                         <i class="fab fa-instagram"></i>
+                                     <i class="fab fa-instagram"></i>
                                      </a>
 
 
@@ -155,20 +155,39 @@
                                      <div class="info-box_icon">
                                          <i class="fas fa-location-dot"></i>
                                      </div>
-                                     <p class="info-box_text">Kachankawal-07</p>
+                                     @if (isset($data['address']))
+                                         <p class="info-box_text">{{ $data['address'] }}</p>
+                                     @else
+                                         <p class="info-box_text"></p>
+                                     @endif
+
                                  </div>
                                  <div class="info-box-wrap">
                                      <div class="info-box_icon">
                                          <i class="fas fa-envelope"></i>
                                      </div>
-                                     <a href="mailto:info.holyfield.dipen@gmail.com"
-                                         class="info-box_link">info.holyfield.dipen@gmail.com</a>
+                                      @if (isset($data['email']))
+                                        <a href="mailto:{{ $data['email'] }}"
+                                         class="info-box_link">{{ $data['email'] }}</a>
+                                     @else
+                                        <a href="mailto:"
+                                         class="info-box_link"></a>
+                                     @endif
+
+                                     
                                  </div>
                                  <div class="info-box-wrap">
                                      <div class="info-box_icon">
                                          <i class="fas fa-phone"></i>
                                      </div>
-                                     <a href="tel:+9779840393746" class="info-box_link">+977 9840393746</a>
+
+                                      @if (isset($data['phone_no']))
+                                        <a href="tel:{{ $data['phone_no'] }}" class="info-box_link">{{ $data['phone_no'] }}</a>
+                                     @else
+                                       <a href="tel:" class="info-box_link"></a>
+                                     @endif
+
+                                    
                                  </div>
                              </div>
                          </div>

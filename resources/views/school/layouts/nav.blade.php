@@ -16,10 +16,10 @@
                     <a href="{{ url('/') }}">Home</a>
 
                 </li>
-              
+
 
                 <li>
-                    <a href="{{url('teachers')}}">Teachers</a>
+                    <a href="{{ url('teachers') }}">Teachers</a>
 
                 </li>
                 <li>
@@ -37,7 +37,7 @@
 
                 </li>
                 <li>
-                    <a href="{{url('about-us')}}">About Us</a>
+                    <a href="{{ url('about-us') }}">About Us</a>
 
                 </li>
                 <li>
@@ -59,11 +59,21 @@
                         <ul>
                             <li>
                                 <i class="far fa-phone"></i>
-                                <a href="tel:+11156456825">+111 (564) 568 25</a>
+                                @if (isset($data['phone_no']))
+                                    <a href="tel:{{ $data['phone_no'] }}"
+                                        class="info-box_link">{{ $data['phone_no'] }}</a>
+                                @else
+                                    <a href="tel:" class="info-box_link"></a>
+                                @endif
                             </li>
                             <li class="d-none d-xl-inline-block">
                                 <i class="far fa-envelope"></i>
-                                <a href="mailto:info.holyfield.dipen@gmail.com">info.holyfield.dipen@gmail.com</a>
+                                @if (isset($data['email']))
+                                    <a href="mailto:{{ $data['email'] }}"
+                                        class="info-box_link">{{ $data['email'] }}</a>
+                                @else
+                                    <a href="mailto:" class="info-box_link"></a>
+                                @endif
                             </li>
                             <li>
                                 <i class="far fa-clock"></i>
@@ -79,34 +89,34 @@
                                 <div class="header-social">
                                     <span class="social-title">Follow Us:</span>
                                     @if (isset($data['facebook_link']))
-                                         <a href="{{ $data['facebook_link'] }}" target="_blank">
-                                         @else
-                                             <a href="#">
-                                     @endif
+                                        <a href="{{ $data['facebook_link'] }}" target="_blank">
+                                        @else
+                                            <a href="#">
+                                    @endif
 
-                                     <i class="fab fa-facebook-f"></i>
-                                     </a>
-                                     @if (isset($data['twitter_link']))
-                                         <a href="{{ $data['twitter_link'] }}" target="_blank">
-                                         @else
-                                             <a href="#">
-                                     @endif
-                                     <i class="fab fa-twitter"></i>
-                                     </a>
-                                     @if (isset($data['youtube_link']))
-                                         <a href="{{ $data['youtube_link'] }}" target="_blank">
-                                         @else
-                                             <a href="#">
-                                     @endif
-                                     <i class="fab fa-youtube"></i>
-                                     </a>
-                                     @if (isset($data['instagram_link']))
-                                         <a href="{{ $data['instagram_link'] }}" target="_blank">
-                                         @else
-                                             <a href="#">
-                                     @endif
-                                         <i class="fab fa-instagram"></i>
-                                     </a>
+                                    <i class="fab fa-facebook-f"></i>
+                                    </a>
+                                    @if (isset($data['twitter_link']))
+                                        <a href="{{ $data['twitter_link'] }}" target="_blank">
+                                        @else
+                                            <a href="#">
+                                    @endif
+                                    <i class="fab fa-twitter"></i>
+                                    </a>
+                                    @if (isset($data['youtube_link']))
+                                        <a href="{{ $data['youtube_link'] }}" target="_blank">
+                                        @else
+                                            <a href="#">
+                                    @endif
+                                    <i class="fab fa-youtube"></i>
+                                    </a>
+                                    @if (isset($data['instagram_link']))
+                                        <a href="{{ $data['instagram_link'] }}" target="_blank">
+                                        @else
+                                            <a href="#">
+                                    @endif
+                                    <i class="fab fa-instagram"></i>
+                                    </a>
 
 
                                 </div>
@@ -128,8 +138,8 @@
                     <div class="col-auto">
                         <div class="header-logo">
                             <a href="{{ url('/') }}" style="display: inline-block; text-decoration: none;">
-                                <img src="{{ url('assets/school/img/logo.jpeg') }}" alt="Holy Field English School Logo"
-                                    style="max-width: 70px;">
+                                <img src="{{ url('assets/school/img/logo.jpeg') }}"
+                                    alt="Holy Field English School Logo" style="max-width: 70px;">
                                 <h5 style="display: inline-block; vertical-align: middle; margin-left: 5px;"
                                     class="mt-3">Holy Field
                                     English School</h5>
@@ -148,7 +158,7 @@
                                         </li>
 
                                         <li>
-                                            <a href="{{url('teachers')}}">Teachers</a>
+                                            <a href="{{ url('teachers') }}">Teachers</a>
 
                                         </li>
                                         <li>
@@ -166,7 +176,7 @@
 
                                         </li>
                                         <li>
-                                            <a href="{{url('about-us')}}">About Us</a>
+                                            <a href="{{ url('about-us') }}">About Us</a>
 
                                         </li>
 
@@ -182,7 +192,7 @@
                                         <i class="far fa-search"></i>
                                     </button>
 
-                                    <a href="{{url('contact')}}" class="th-btn ml-25">
+                                    <a href="{{ url('contact') }}" class="th-btn ml-25">
                                         Contact Us <i class="fas fa-arrow-right ms-1"></i>
                                     </a>
                                 </div>
