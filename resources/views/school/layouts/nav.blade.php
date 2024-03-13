@@ -140,9 +140,17 @@
                             <a href="{{ url('/') }}" style="display: inline-block; text-decoration: none;">
                                 <img src="{{ url('assets/school/img/logo.jpeg') }}"
                                     alt="Holy Field English School Logo" style="max-width: 70px;">
-                                <h5 style="display: inline-block; vertical-align: middle; margin-left: 5px;"
-                                    class="mt-3">Holy Field
-                                    English School</h5>
+
+
+                                @if (isset($data['school_name']))
+                                    <h5 style="display: inline-block; vertical-align: middle; margin-left: 5px;"
+                                        class="mt-3">{{ $data['school_name'] }}</h5>
+                                @else
+                                    <h5 style="display: inline-block; vertical-align: middle; margin-left: 5px;"
+                                        class="mt-3"></h5>
+                                @endif
+
+
                             </a>
 
                         </div>
