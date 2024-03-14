@@ -20,7 +20,7 @@
                         <div class="col">
                             <h3 class="page-title">Settings</h3>
                             <ul class="breadcrumb">
-                                <li class="breadcrumb-item"><a href="settings.html">Settings</a></li>
+                                <li class="breadcrumb-item"><a href="{{url('admin/settings/general-settings')}}">Settings</a></li>
                                 <li class="breadcrumb-item active">Social Links</li>
                             </ul>
                         </div>
