@@ -20,6 +20,14 @@ class AdminTeacherController extends Controller
         return view('admin.teachers.view_teachers',compact('teachers'));
     }
 
+    public function show($id){
+        
+        $teacher=Teacher::with('media')->find($id);
+
+       return view('admin.teachers.view_teacher_details',compact('teacher'));
+        
+    }
+
     public function store(TeacherCreateRequest $request){
 
         try{

@@ -24,7 +24,7 @@ class AdminSeeder extends Seeder
             'address' => 'Kachankawal-07, Jhapa',
             'mobile_no' => '9840393746',
             'email_verified_at' => Carbon::now(),
-            'user_role' => 'admin',
+            'user_role' => 'superadmin',
 
         ];
 

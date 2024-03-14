@@ -22,7 +22,7 @@
                         <div class="col">
                             <h3 class="page-title">Teachers</h3>
                             <ul class="breadcrumb">
-                                <li class="breadcrumb-item"><a href="index.html">Dashboard</a></li>
+                                <li class="breadcrumb-item"><a href="{{url('admin/dashboard')}}">Dashboard</a></li>
                                 <li class="breadcrumb-item active">Teachers</li>
                             </ul>
                         </div>
@@ -73,6 +73,7 @@
                                     <th>DOB</th>
                                     <th>Mobile No</th>
                                     <th>Address</th>
+                                    <th>Action</th>
 
                                 </tr>
 
@@ -101,13 +102,23 @@
 
 
                                         <td>{{ $teacher->address }}</td>
+                                        <td class="text-end">
+                                            <div class="actions">
+                                                <a href="{{url('admin/teachers/view/')}}/{{$teacher->id}}" class="btn btn-sm bg-success-light me-2">
+                                                    <i class="feather-eye"></i>
+                                                </a>
+                                                {{-- <a href="edit-teacher.html" class="btn btn-sm bg-danger-light">
+                                                    <i class="feather-edit"></i>
+                                                </a> --}}
+                                            </div>
+                                        </td>
 
                                     </tr>
                                 @empty
-                                <td colspan="7">
-                                    <img src="{{ url('assets/school/img/Empty-rafiki.png') }}"
-                                        class="img-fluid mx-auto d-block" alt="Empty Data" style="max-width: 40%" />
-                                </td>
+                                    <td colspan="7">
+                                        <img src="{{ url('assets/school/img/Empty-rafiki.png') }}"
+                                            class="img-fluid mx-auto d-block" alt="Empty Data" style="max-width: 40%" />
+                                    </td>
                                 @endforelse
 
                             </tbody>

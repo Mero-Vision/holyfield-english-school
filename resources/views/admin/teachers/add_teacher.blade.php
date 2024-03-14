@@ -22,7 +22,7 @@
                         <div class="col">
                             <h3 class="page-title">Add Teachers</h3>
                             <ul class="breadcrumb">
-                                <li class="breadcrumb-item"><a href="teachers.html">Teachers</a></li>
+                                <li class="breadcrumb-item"><a href="{{url('admin/teachers/view')}}">Teachers</a></li>
                                 <li class="breadcrumb-item active">Add Teachers</li>
                             </ul>
                         </div>

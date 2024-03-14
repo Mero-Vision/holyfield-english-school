@@ -54,6 +54,7 @@ Route::group(['middleware'=>'auth','prefix'=>'admin'],function(){
 
 
     Route::get('teachers/view', [AdminTeacherController::class, 'viewTeachersIndex']);
+    Route::get('teachers/view/{id}', [AdminTeacherController::class, 'show']);
     Route::get('teachers/add',[AdminTeacherController::class,'index']);
     Route::post('teachers/add', [AdminTeacherController::class, 'store']);
 
