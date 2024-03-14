@@ -85,6 +85,9 @@
                             </div>
                         </div>
                     @empty
+                     <img src="{{ url('assets/school/img/no-event.png') }}" class="mx-auto d-block"
+                        style="max-width:20%" />
+                    <h5 class="text-center">No Blogs</h5>
                     @endforelse
 
 
