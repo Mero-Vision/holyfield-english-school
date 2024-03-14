@@ -7,3 +7,5 @@
 <script src="{{ url('assets/admin/js/script.js') }}"></script>
 <script src="{{ url('assets/admin/js/select2.min.js')}}"></script>
 <script src="{{ url('assets/admin/js/filepond.js')}}"></script>
+<script src="{{ url('assets/admin/js/apexcharts.min.js')}}"></script>
+<script src="{{ url('assets/admin/js/chart-data.js')}}"></script>
