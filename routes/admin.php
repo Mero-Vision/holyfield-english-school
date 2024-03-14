@@ -39,6 +39,7 @@ Route::group(['middleware'=>'auth','prefix'=>'admin'],function(){
 
     Route::get('cms/blogs/active-blogs', [AdminBlogController::class, 'index']);
     Route::get('cms/blogs/add-blog', [AdminBlogController::class, 'create']);
+    Route::post('cms/blogs/add-blog', [AdminBlogController::class, 'store']);
      Route::get('cms/contact-us',[AdminContactUsController::class,'index']);
     Route::get('cms/events/view', [AdminEventController::class, 'index']);
     Route::get('cms/events', [AdminEventController::class, 'eventData']);

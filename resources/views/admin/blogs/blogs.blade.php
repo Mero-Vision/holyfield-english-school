@@ -19,12 +19,12 @@
                 <div class="row">
                     <div class="col-md-9">
                         <ul class="list-links mb-4">
-                            <li class="active"><a href="{{url('admin/cms/blogs/active-blogs')}}">Active Blog</a></li>
-                            <li><a href="{{url('admin/cms/blogs/active-blogs')}}">Pending Blog</a></li>
+                            <li class="active"><a href="{{ url('admin/cms/blogs/active-blogs') }}">Active Blog</a></li>
+                            <li><a href="{{ url('admin/cms/blogs/active-blogs') }}">Pending Blog</a></li>
                         </ul>
                     </div>
                     <div class="col-md-3 text-md-end">
-                        <a href="{{url('admin/cms/blogs/add-blog')}}" class="btn btn-primary btn-blog mb-3"><i
+                        <a href="{{ url('admin/cms/blogs/add-blog') }}" class="btn btn-primary btn-blog mb-3"><i
                                 class="feather-plus-circle me-1"></i> Add New</a>
                     </div>
                 </div>
@@ -32,35 +32,32 @@
 
 
                     @forelse ($blogs as $blog)
-
                         <div class="col-md-6 col-xl-4 col-sm-12 d-flex">
                             <div class="blog grid-blog flex-fill">
                                 <div class="blog-image">
                                     <a href="blog-details.html"><img class="img-fluid"
-                                            src="assets/img/category/blog-2.jpg" alt="Post Image"></a>
-                                    <div class="blog-views">
+                                            src="{{ $blog->getFirstMediaUrl('blog_image', 'crop_blog_image') }}"
+                                            alt="Post Image"></a>
+                                    {{-- <div class="blog-views">
                                         <i class="feather-eye me-1"></i> 132
-                                    </div>
+                                    </div> --}}
                                 </div>
                                 <div class="blog-content">
                                     <ul class="entry-meta meta-item">
                                         <li>
                                             <div class="post-author">
-                                                <a href="profile.html">
-                                                    <img src="assets/img/profiles/avatar-02.jpg" alt="Post Author">
+                                                <a href="#">
+                                                    <img src="{{ Avatar::create($blog->published_by)->toBase64() }}"
+                                                        alt="Post Author">
                                                     <span>
-                                                        <span class="post-title">Lois A</span>
-                                                        <span class="post-date"><i class="far fa-clock"></i> 4 Dec
-                                                            2022</span>
+                                                        <span class="post-title">{{$blog->title}}</span>
+                                                        <span class="post-date"><i class="far fa-clock"></i> {{$blog->created_at}}</span>
                                                     </span>
                                                 </a>
                                             </div>
                                         </li>
                                     </ul>
-                                    <h3 class="blog-title"><a href="blog-details.html">Discussion Increase student
-                                            learning</a></h3>
-                                    <p>Lorem ipsum dolor sit amet, consectetur em adipiscing elit, sed do eiusmod
-                                        tempor.
+                                   <p>{!! implode(' ', array_slice(str_word_count(strip_tags($blog->description), 1), 0, 20)) !!}...</p>
                                     </p>
                                 </div>
                                 <div class="row">
@@ -84,10 +81,11 @@
                         </div>
 
                     @empty
-                    <img src="{{url('assets/school/img/Empty-rafiki.png')}}"  class="img-fluid mx-auto d-block" alt="Empty Data" style="max-width: 40%"/>
+                        <img src="{{ url('assets/school/img/Empty-rafiki.png') }}" class="img-fluid mx-auto d-block"
+                            alt="Empty Data" style="max-width: 40%" />
                     @endforelse
 
-                    
+
 
 
 
@@ -99,7 +97,7 @@
 
                 </div>
 
-                
+
 
 
                 <div class="modal fade contentmodal" id="deleteModal" tabindex="-1" aria-hidden="true">
