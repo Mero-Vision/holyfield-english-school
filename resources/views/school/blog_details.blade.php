@@ -1,9 +1,10 @@
 <!doctype html>
 <html class="no-js" lang="zxx">
-@include('school.layouts.header')
-<x-meta title="{{ $blog->title }}"
+    <x-meta title="{{ $blog->title }}"
            description="{!! implode(' ', array_slice(str_word_count(strip_tags($blog->description), 1), 0, 30)) !!}"
            image="{{ $blog->getFirstMediaUrl('blog_image', 'crop_blog_image') }}" />
+@include('school.layouts.header')
+
 @livewireStyles
 
 <body>
