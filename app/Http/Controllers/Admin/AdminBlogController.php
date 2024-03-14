@@ -26,6 +26,15 @@ class AdminBlogController extends Controller
         
     }
 
+    public function destroy($id){
+
+        $blog=Blog::find($id);
+
+        $blog->clearMediaCollection('blog_image');
+        $blog->delete();
+        return back()->with('success','Blog deleted successfully!');
+    }
+
     public function store(Request $request){
         $request->validate([
             'title'=>['required'],

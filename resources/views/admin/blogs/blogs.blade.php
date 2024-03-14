@@ -64,7 +64,7 @@
                                 <div class="row">
                                     <div class="edit-options">
                                         <div class="edit-delete-btn">
-                                            <a href="edit-blog.html" class="text-success"><i
+                                            <a href="" class="text-success"><i
                                                     class="feather-edit-3 me-1"></i> Edit</a>
                                             <a href="edit-blog.html" class="text-danger" data-bs-toggle="modal"
                                                 data-bs-target="#deleteModal"><i class="feather-trash-2 me-1"></i></i>
@@ -80,6 +80,28 @@
                                 </div>
                             </div>
                         </div>
+
+
+                        <div class="modal fade contentmodal" id="deleteModal" tabindex="-1" aria-hidden="true">
+                    <div class="modal-dialog modal-dialog-centered">
+                        <div class="modal-content doctor-profile">
+                            <div class="modal-header pb-0 border-bottom-0  justify-content-end">
+                                <button type="button" class="close-btn" data-bs-dismiss="modal" aria-label="Close"><i
+                                        class="feather-x-circle"></i></button>
+                            </div>
+                            <div class="modal-body">
+                                <div class="delete-wrap text-center">
+                                    <div class="del-icon"><i class="feather-x-circle"></i></div>
+                                    <h2>Sure you want to delete</h2>
+                                    <div class="submit-section">
+                                        <a href="{{url('admin/cms/blogs/delete')}}/{{$blog->id}}" class="btn btn-success me-2">Yes</a>
+                                        <a href="#" class="btn btn-danger" data-bs-dismiss="modal">No</a>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
 
                     @empty
                         <img src="{{ url('assets/school/img/Empty-rafiki.png') }}" class="img-fluid mx-auto d-block"
@@ -101,26 +123,7 @@
 
 
 
-                <div class="modal fade contentmodal" id="deleteModal" tabindex="-1" aria-hidden="true">
-                    <div class="modal-dialog modal-dialog-centered">
-                        <div class="modal-content doctor-profile">
-                            <div class="modal-header pb-0 border-bottom-0  justify-content-end">
-                                <button type="button" class="close-btn" data-bs-dismiss="modal" aria-label="Close"><i
-                                        class="feather-x-circle"></i></button>
-                            </div>
-                            <div class="modal-body">
-                                <div class="delete-wrap text-center">
-                                    <div class="del-icon"><i class="feather-x-circle"></i></div>
-                                    <h2>Sure you want to delete</h2>
-                                    <div class="submit-section">
-                                        <a href="blog.html" class="btn btn-success me-2">Yes</a>
-                                        <a href="#" class="btn btn-danger" data-bs-dismiss="modal">No</a>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
+                
 
             </div>
         </div>
