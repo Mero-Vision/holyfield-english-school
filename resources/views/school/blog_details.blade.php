@@ -1,9 +1,8 @@
 <!doctype html>
 <html class="no-js" lang="zxx">
-    <x-meta title="{{ $blog->title }}"
-           description="{!! implode(' ', array_slice(str_word_count(strip_tags($blog->description), 1), 0, 30)) !!}"
-           image="{{ $blog->getFirstMediaUrl('blog_image', 'crop_blog_image') }}" />
-           @livewireStyles
+<x-meta title="{{ $blog->title }}" description="{!! implode(' ', array_slice(str_word_count(strip_tags($blog->description), 1), 0, 30)) !!}"
+    image="{{ $blog->getFirstMediaUrl('blog_image', 'crop_blog_image') }}" />
+@livewireStyles
 @include('school.layouts.header')
 
 
@@ -43,12 +42,12 @@
         </div>
         <div class="container">
             <div class="breadcumb-content text-center">
-                <h1 class="breadcumb-title">Blog Post</h1>
+                <h1 class="breadcumb-title">Blog Details</h1>
                 <ul class="breadcumb-menu">
                     <li>
-                        <a href="{{ url('/') }}">Home</a>
+                        <a href="{{ url('blogs') }}">Blog</a>
                     </li>
-                    <li>Blog</li>
+                    <li>Blog Details</li>
                 </ul>
             </div>
         </div>
@@ -88,12 +87,12 @@
                                         <li>
 
                                             <a href="https://www.facebook.com/sharer/sharer.php?u={{ urlencode(request()->fullUrl()) }}"
-                                                target="_blank"> <i
-                                                    class="fab fa-facebook-f"></i></a>
+                                                target="_blank"> <i class="fab fa-facebook-f"></i></a>
 
                                         </li>
                                         <li>
-                                            <a href="https://twitter.com/" target="_blank">
+                                            <a href="https://twitter.com/intent/tweet?url={{ urlencode(url()->current()) }}"
+                                                target="_blank">
                                                 <i class="fab fa-twitter"></i>
                                             </a>
                                         </li>
