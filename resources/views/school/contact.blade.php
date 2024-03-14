@@ -1,6 +1,9 @@
 <!doctype html>
 <html class="no-js" lang="zxx">
 @include('school.layouts.header')
+<x-meta title="Holyfield English School"
+           description="Welcome to Holyfield English School, where excellence in education meets a nurturing community environment. Established with a commitment to academic rigor, character development, and holistic growth."
+           image="{{url('assets/school/img/logo.jpeg')}}" />
 @livewireStyles
 
 <body>

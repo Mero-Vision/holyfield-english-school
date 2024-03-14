@@ -23,4 +23,11 @@ class SchoolBlogController extends Controller
         $recentBlogs = Blog::with('media')->where('status', 'active')->latest()->paginate(5);
         return view('school.blogs',compact('blogs', 'recentBlogs'));
     }
+
+    public function show($slug)
+    {
+        $blog = Blog::with('media')->where('slug', $slug)->first();
+        $recentBlogs = Blog::with('media')->where('status', 'active')->latest()->paginate(5);
+       return view('school.blog_details',compact('blog', 'recentBlogs'));
+    }
 }

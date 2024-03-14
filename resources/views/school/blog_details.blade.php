@@ -1,9 +1,9 @@
 <!doctype html>
 <html class="no-js" lang="zxx">
 @include('school.layouts.header')
-<x-meta title="Holyfield English School"
-           description="Welcome to Holyfield English School, where excellence in education meets a nurturing community environment. Established with a commitment to academic rigor, character development, and holistic growth."
-           image="{{url('assets/school/img/logo.jpeg')}}" />
+<x-meta title="{{ $blog->title }}"
+           description="{!! implode(' ', array_slice(str_word_count(strip_tags($blog->description), 1), 0, 30)) !!}"
+           image="{{ $blog->getFirstMediaUrl('blog_image', 'crop_blog_image') }}" />
 @livewireStyles
 
 <body>
@@ -44,7 +44,7 @@
                 <h1 class="breadcumb-title">Blog Post</h1>
                 <ul class="breadcumb-menu">
                     <li>
-                        <a href="{{url('/')}}">Home</a>
+                        <a href="{{ url('/') }}">Home</a>
                     </li>
                     <li>Blog</li>
                 </ul>
@@ -52,61 +52,71 @@
         </div>
     </div>
 
-    <section class="th-blog-wrapper space-top space-extra2-bottom">
+    <section class="th-blog-wrapper blog-details space-top space-extra2-bottom">
         <div class="container">
-            <div class="row gx-40">
-
+            <div class="row gx-30">
                 <div class="col-xxl-8 col-lg-7">
-
-                    @forelse ($blogs as $blog)
-                        <div class="th-blog blog-single has-post-thumbnail">
-                            <div class="blog-img">
-                                <a href="blog-details.html">
-                                    <img src="{{ $blog->getFirstMediaUrl('blog_image', 'crop_blog_image') }}"
-                                        alt="Blog Image">
+                    <div class="th-blog blog-single">
+                        <div class="blog-img">
+                            <img src="{{ $blog->getFirstMediaUrl('blog_image', 'crop_blog_image') }}" alt="Blog Image">
+                        </div>
+                        <div class="blog-content">
+                            <div class="blog-meta">
+                                <a class="author">
+                                    <i class="far fa-user"></i>
+                                    by {{ $blog->published_by }}
                                 </a>
+                                <a>
+                                    <i class="fa-light fa-calendar-days"></i>
+                                    {{ $blog->created_at->format('M j, Y') }}
+                                </a>
+
                             </div>
-                            <div class="blog-content">
-                                <div class="blog-meta">
-                                    <a class="author" href="">
-                                        <i class="fa-light fa-user"></i>
-                                        by {{ $blog->published_by }}
-                                    </a>
-                                    <a href="">
-                                        <i class="fa-light fa-clock"></i>
-                                        {{ $blog->created_at->format('M j, Y') }}
-                                    </a>
+                            <h2 class="blog-title">{{ $blog->title }}</h2>
+                            <p>{!! $blog->description !!}</p>
 
+
+                        </div>
+                        <div class="share-links clearfix">
+                            <div class="row justify-content-between">
+
+                                <div class="col-md-auto text-xl-end">
+                                    <span class="share-links-title">Share:</span>
+                                    <ul class="social-links">
+                                        <li>
+
+                                            <a href="https://www.facebook.com/sharer/sharer.php?u={{ urlencode(request()->fullUrl()) }}"
+                                                target="_blank"> <i
+                                                    class="fab fa-facebook-f"></i></a>
+
+                                        </li>
+                                        <li>
+                                            <a href="https://twitter.com/" target="_blank">
+                                                <i class="fab fa-twitter"></i>
+                                            </a>
+                                        </li>
+                                        <li>
+                                            <a href="https://linkedin.com/" target="_blank">
+                                                <i class="fab fa-linkedin-in"></i>
+                                            </a>
+                                        </li>
+                                        <li>
+                                            <a href="https://instagram.com/" target="_blank">
+                                                <i class="fab fa-instagram"></i>
+                                            </a>
+                                        </li>
+                                    </ul>
                                 </div>
-                                <h2 class="blog-title">
-                                    <a href="{{url('blogs')}}/{{$blog->slug}}">{{ $blog->title }}</a>
-                                </h2>
-                                <p class="blog-text">{!! implode(' ', array_slice(str_word_count(strip_tags($blog->description), 1), 0, 30)) !!}...</p>
-                                <a href="blog-details.html" class="link-btn">
-                                    Read More Details<i class="fas fa-arrow-right ms-2"></i>
-                                </a>
                             </div>
                         </div>
-                    @empty
-                        <img src="{{ url('assets/school/img/no-event.png') }}" class="mx-auto d-block"
-                            style="max-width:20%" />
-                        <h5 class="text-center">No Blogs</h5>
-                    @endforelse
-
-
-
-
-                    <div class="th-pagination">
-                        <ul>
-                            {{ $blogs->links('pagination::bootstrap-5') }}
-                        </ul>
                     </div>
-                </div>
 
+
+                </div>
                 <div class="col-xxl-4 col-lg-5">
                     <aside class="sidebar-area">
                         <div class="widget widget_search">
-                            <form action="{{url('blogs')}}" class="search-form">
+                            <form action="{{ url('blogs') }}" class="search-form">
                                 <input type="text" placeholder="Search Product..." name="search_keyword">
                                 <button type="submit">
                                     <i class="far fa-search"></i>
@@ -120,7 +130,7 @@
                                 @forelse ($recentBlogs as $recentBlog)
                                     <div class="recent-post">
                                         <div class="media-img">
-                                            <a href="{{url('blogs')}}/{{$recentBlog->slug}}">
+                                            <a href="{{ url('blogs') }}/{{ $recentBlog->slug }}">
                                                 <img src="{{ $recentBlog->getFirstMediaUrl('blog_image', 'crop_blog_image') }}"
                                                     alt="Blog Image">
                                             </a>
@@ -128,10 +138,10 @@
                                         <div class="media-body">
                                             <h4 class="post-title">
                                                 <a class="text-inherit"
-                                                    href="{{url('blogs')}}/{{$recentBlog->slug}}">{{ $recentBlog->title }}</a>
+                                                    href="{{ url('blogs') }}/{{ $recentBlog->slug }}">{{ $recentBlog->title }}</a>
                                             </h4>
                                             <div class="recent-post-meta">
-                                                <a href="{{url('blogs')}}/{{$recentBlog->slug}}">
+                                                <a href="{{ url('blogs') }}/{{ $recentBlog->slug }}">
                                                     <i class="fal fa-calendar"></i>
                                                     {{ $recentBlog->created_at->format('M j, Y') }}
                                                 </a>
@@ -139,9 +149,8 @@
                                         </div>
                                     </div>
                                 @empty
-                                <h5 class="text-center">No Recent Post</h5>
+                                    <h5 class="text-center">No Recent Post</h5>
                                 @endforelse
-                               
 
 
                             </div>

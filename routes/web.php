@@ -27,3 +27,4 @@ Route::get('contact',[ContactController::class,'index']);
 Route::get('about-us', [SchoolAboutController::class, 'index']);
 Route::get('teachers', [SchoolTeacherController::class, 'index']);
 Route::get('blogs', [SchoolBlogController::class, 'index']);
+Route::get('blogs/{slug}', [SchoolBlogController::class, 'show']);
