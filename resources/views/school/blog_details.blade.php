@@ -91,7 +91,7 @@
 
                                         </li>
                                         <li>
-                                            <a href="https://twitter.com/intent/tweet?url={{ urlencode(url()->current()) }}"
+                                            <a href="https://twitter.com/intent/tweet?url={{ urlencode(url()->current()) }}&media={{ urlencode($blog->image_url) }}"
                                                 target="_blank">
                                                 <i class="fab fa-twitter"></i>
                                             </a>
