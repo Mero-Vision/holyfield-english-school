@@ -22,7 +22,7 @@
                             <div class="blog-single-post">
                                 <a href="{{url('admin/cms/blogs/active-blogs')}}" class="back-btn"><i class="feather-chevron-left"></i> Back</a>
                                 <div class="blog-image">
-                                    <a href="javascript:void(0);"><img alt src="{{ $blog->getFirstMediaUrl('blog_image') }}"
+                                    <a href="javascript:void(0);"><img alt src="{{ $blog->getFirstMediaUrl('blog_image', 'crop_blog_image') }}"
                                             class="img-fluid"></a>
                                 </div>
                                 <h3 class="blog-title">{{$blog->title}}

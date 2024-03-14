@@ -27,7 +27,12 @@ class AdminBlogController extends Controller
     }
 
     public function store(Request $request){
-
+        $request->validate([
+            'title'=>['required'],
+            'description'=>['required'],
+            'blog_image'=>['required','image']
+            
+        ]);
         try{
 
             $blog=DB::transaction(function()use($request){

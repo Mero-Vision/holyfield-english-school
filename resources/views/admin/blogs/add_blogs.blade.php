@@ -36,6 +36,9 @@
                                                 <div class="form-group">
                                                     <label>Title<span class="text-danger">*</span></label>
                                                     <input type="text" class="form-control" name="title">
+                                                    @error('title')
+                                                        <p class="text-danger">{{$message}}</p>
+                                                    @enderror
                                                 </div>
                                             </div>
                                             <div class="col-lg-12 col-md-12">
@@ -43,6 +46,9 @@
                                                     <label>Blog Image</label><br>
 
                                                     <input type="file" class="upload" name="blog_image">
+                                                     @error('blog_image')
+                                                        <p class="text-danger">{{$message}}</p>
+                                                    @enderror
 
                                                 </div>
                                             </div>
@@ -50,6 +56,9 @@
                                                 <div class="form-group">
                                                     <label>Description</label>
                                                    <textarea id="editor" name="description"></textarea>
+                                                    @error('description')
+                                                        <p class="text-danger">{{$message}}</p>
+                                                    @enderror
                                                 </div>
                                             </div>
                                         </div>
