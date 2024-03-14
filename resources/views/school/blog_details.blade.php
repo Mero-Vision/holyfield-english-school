@@ -96,16 +96,7 @@
                                                 <i class="fab fa-twitter"></i>
                                             </a>
                                         </li>
-                                        <li>
-                                            <a href="https://linkedin.com/" target="_blank">
-                                                <i class="fab fa-linkedin-in"></i>
-                                            </a>
-                                        </li>
-                                        <li>
-                                            <a href="https://instagram.com/" target="_blank">
-                                                <i class="fab fa-instagram"></i>
-                                            </a>
-                                        </li>
+                                       
                                     </ul>
                                 </div>
                             </div>
