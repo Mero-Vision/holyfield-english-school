@@ -50,13 +50,14 @@
                                                     <img src="{{ Avatar::create($blog->published_by)->toBase64() }}"
                                                         alt="Post Author">
                                                     <span>
-                                                        <span class="post-title">{{$blog->title}}</span>
-                                                        <span class="post-date"><i class="far fa-clock"></i> {{$blog->created_at}}</span>
+                                                        <span class="post-title">{{$blog->published_by}}</span>
+                                                        <span class="post-date"><i class="far fa-clock"></i> {{$blog->created_at->format('M j, Y')}}</span>
                                                     </span>
                                                 </a>
                                             </div>
                                         </li>
                                     </ul>
+                                    <h3 class="blog-title"><a href="{{url('admin/cms/blogs/blog-details')}}/{{$blog->slug}}">{{$blog->title}}</a></h3>
                                    <p>{!! implode(' ', array_slice(str_word_count(strip_tags($blog->description), 1), 0, 20)) !!}...</p>
                                     </p>
                                 </div>

@@ -20,6 +20,12 @@ class AdminBlogController extends Controller
         return view('admin.blogs.add_blogs');
     }
 
+    public function show($slug){
+        $blog=Blog::with('media')->where('slug',$slug)->first();
+        return view('admin.blogs.blog_details',compact('blog'));
+        
+    }
+
     public function store(Request $request){
 
         try{
