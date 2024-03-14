@@ -33,7 +33,7 @@
 
 
                 <li>
-                    <a href="#">Blog</a>
+                    <a href="{{url('blogs')}}">Blog</a>
 
                 </li>
                 <li>
@@ -180,7 +180,7 @@
 
 
                                         <li>
-                                            <a href="#">Blog</a>
+                                            <a href="{{url('blogs')}}">Blog</a>
 
                                         </li>
                                         <li>
