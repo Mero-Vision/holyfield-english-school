@@ -3,6 +3,7 @@
 use App\Http\Controllers\Admin\AdminBlogController;
 use App\Http\Controllers\Admin\AdminContactUsController;
 use App\Http\Controllers\Admin\AdminEventController;
+use App\Http\Controllers\Admin\AdminGalleryController;
 use App\Http\Controllers\Admin\AdminSettingController;
 use App\Http\Controllers\Admin\AdminSiteSettingController;
 use App\Http\Controllers\Admin\AdminTeacherController;
@@ -28,11 +29,11 @@ use Illuminate\Support\Facades\Route;
 Route::get('login', [LoginController::class, 'index'])->name('login');
 Route::post('login', [LoginController::class, 'login']);
 
-Route::group(['middleware'=>'auth','prefix'=>'admin'],function(){
+Route::group(['middleware' => 'auth', 'prefix' => 'admin'], function () {
 
     Route::get('logout', [LoginController::class, 'logout']);
 
-    Route::get('dashboard',[DashboardController::class,'index']);
+    Route::get('dashboard', [DashboardController::class, 'index']);
 
     Route::get('profile', [ProfileController::class, 'index']);
 
@@ -42,12 +43,13 @@ Route::group(['middleware'=>'auth','prefix'=>'admin'],function(){
     Route::post('cms/blogs/add-blog', [AdminBlogController::class, 'store']);
     Route::get('cms/blogs/delete/{id}', [AdminBlogController::class, 'destroy']);
     Route::get('cms/blogs/blog-details/{slug}', [AdminBlogController::class, 'show']);
-    
-     Route::get('cms/contact-us',[AdminContactUsController::class,'index']);
+    Route::get('cms/contact-us', [AdminContactUsController::class, 'index']);
     Route::get('cms/events/view', [AdminEventController::class, 'index']);
     Route::get('cms/events', [AdminEventController::class, 'eventData']);
     Route::get('cms/events/add', [AdminEventController::class, 'addEventIndex']);
     Route::post('cms/events/add', [AdminEventController::class, 'store']);
+    Route::get('cms/gallery', [AdminGalleryController::class, 'index']);
+    Route::post('cms/gallery', [AdminGalleryController::class, 'store']);
 
 
     Route::get('settings/general-settings', [AdminSettingController::class, 'generalSettingIndex']);
@@ -59,12 +61,6 @@ Route::group(['middleware'=>'auth','prefix'=>'admin'],function(){
 
     Route::get('teachers/view', [AdminTeacherController::class, 'viewTeachersIndex']);
     Route::get('teachers/view/{id}', [AdminTeacherController::class, 'show']);
-    Route::get('teachers/add',[AdminTeacherController::class,'index']);
+    Route::get('teachers/add', [AdminTeacherController::class, 'index']);
     Route::post('teachers/add', [AdminTeacherController::class, 'store']);
-
-   
-
-
-   
-    
 });
