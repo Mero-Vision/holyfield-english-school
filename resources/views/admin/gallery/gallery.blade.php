@@ -4,6 +4,8 @@
 @include('admin.admin_layouts.header')
 <link rel="stylesheet" href="{{ url('assets/admin/css/ckeditor.css') }}">
 
+
+
 <body>
 
     <div class="main-wrapper">

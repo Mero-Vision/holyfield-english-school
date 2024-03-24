@@ -20,6 +20,8 @@ class AdminGalleryController extends Controller
     public function store(GalleryCreateRequest $request)
     {
 
+        
+
         try {
             $gallery = DB::transaction(function () use ($request) {
 
